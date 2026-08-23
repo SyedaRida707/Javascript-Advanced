@@ -315,7 +315,9 @@
 //* For Loop
 //* ===============================
 
-//? For Loop: A for loop in JavaScript is a control flow statement that allows you to repeatedly execute a block of code a specified number of times. It's particularly useful when you know the exact number of iterations needed.
+//? For Loop: A for loop in JavaScript is a control flow statement that allows 
+// you to repeatedly execute a block of code a specified number of times. 
+// It's particularly useful when you know the exact number of iterations needed.
 
 // example: for (initialization; condition; iteration) {
 //   // Code to be executed in each iteration
@@ -337,11 +339,16 @@
 // }
 
 //? Key Point:
-// The initialization, condition, and iteration expressions are optional. You can omit any or all of them, but you must include the semicolons.
-//* The code for (;;) {} represents an infinite loop in JavaScript. This construct is commonly used when you want a loop to run indefinitely or until a break statement is encountered within the loop. It's equivalent to while (true) {}.
+// The initialization, condition, and iteration expressions are optional. 
+// You can omit any or all of them, but you must include the semicolons.
+
+//*The code for (;;) {} represents an infinite loop in JavaScript. 
+// This construct is commonly used when you want a loop to run indefinitely 
+// or until a break statement is encountered within the loop. It's equivalent to while (true) {}.
 
 //* use case: Game Development:
-//? In game development, an infinite loop can be used to continuously update and render game frames until a specific condition (e.g., game over) is met.
+//? In game development, an infinite loop can be used to continuously 
+// update and render game frames until a specific condition (e.g., game over) is met.
 
 // for (;;) {
 //   // Update game logic and render frames
