@@ -39,8 +39,14 @@
 //* Variables: A variable is a container that holds a value. It has a name 
 // and can be used to store and manipulate data in a program.
 
-var my_data = 'rida'
-var $myage = 21;
-var myEmail = 'rida@gmail.com'
+// valid variable name
+// var my_data = 'rida'
+// var $myage = 21;
+// var myEmail = 'rida@gmail.com'
+
+// Not valid variable name
+// var 123mydata = 'rida'
+// var my@age = 21;
+
 
 
