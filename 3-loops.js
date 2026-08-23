@@ -6,8 +6,8 @@
 //* If Statement
 //* ===============================
 
-//? If Else:  The if...else statement executes a statement if a 
-// specified condition is truthy. If the condition is falsy, 
+//? If Else:  The if...else statement executes a statement if a
+// specified condition is truthy. If the condition is falsy,
 // another statement in the optional else clause will be executed.
 
 //? Syntax
@@ -46,7 +46,7 @@
 //? If the person is younger than 18, not a citizen, or not registered to vote,
 //  display a message saying they are not eligible to vote.
 
-//? If the person is 18 or older but not a citizen, display a message saying they 
+//? If the person is 18 or older but not a citizen, display a message saying they
 // are not eligible due to citizenship status.
 
 //? If the person is 18 or older, a citizen, but not registered to vote, display a message
@@ -56,8 +56,8 @@
 
 // Assume the user's age, citizenship status, and registration status as inputs
 // let userAge = 19;
-// let isCitizen = true; 
-// let isRegistered = true; 
+// let isCitizen = true;
+// let isRegistered = true;
 
 // if (userAge >= 18) {
 //   if (isCitizen) {
@@ -119,7 +119,7 @@
 //* Switch Statement
 //* ===============================
 
-//? Switch Statement: The switch statement is used to perform different 
+//? Switch Statement: The switch statement is used to perform different
 // actions based on different conditions.
 //? Syntax:
 // switch (expression) {
@@ -138,7 +138,7 @@
 // }
 
 // let's see the example
-//! Explain how the switch statement works and what will be the output 
+//! Explain how the switch statement works and what will be the output
 // when the variable day is set to different values.
 
 // var day = "Friday";
@@ -164,13 +164,13 @@
 // ? Challenge time
 //? ==========================
 
-//! Write a JavaScript switch statement that takes a variable areaOfShapes 
-// representing different shapes, and based on its value, calculates and logs the area of the 
-// corresponding shape. 
-// Consider three shapes: 'Rectangle,' 'Circle,' and 'Square.' For 'Rectangle,' 
-// use variables a and b as the sides; for 'Circle,' use a variable r as the radius; 
-// and for 'Square,' use variable a as the side length. If the provided shape is not recognized, 
-// log a message saying, 'Sorry the shape is not available.' Test your switch statement with areaOfShapes set to 'Square' 
+//! Write a JavaScript switch statement that takes a variable areaOfShapes
+// representing different shapes, and based on its value, calculates and logs the area of the
+// corresponding shape.
+// Consider three shapes: 'Rectangle,' 'Circle,' and 'Square.' For 'Rectangle,'
+// use variables a and b as the sides; for 'Circle,' use a variable r as the radius;
+// and for 'Square,' use variable a as the side length. If the provided shape is not recognized,
+// log a message saying, 'Sorry the shape is not available.' Test your switch statement with areaOfShapes set to 'Square'
 // and sides a and b set to 5 and 10, respectively. Ensure that the correct area (25 in this case) is logged to the console.
 // Square: area = a × a
 // Rectangle: area = a × b
@@ -228,13 +228,13 @@
 //* While Loop
 //* ===============================
 
-// While Loop: A while loop in JavaScript is a control structure that 
-// repeatedly executes a block of code as long as a specified condition 
-// remains true. The loop continues iterating while the condition is true, 
+// While Loop: A while loop in JavaScript is a control structure that
+// repeatedly executes a block of code as long as a specified condition
+// remains true. The loop continues iterating while the condition is true,
 // and it terminates when the condition becomes false.
 
 
-// usually used when you don't know exactly how many times and want to 
+// usually used when you don't know exactly how many times and want to
 // continue until a condition becomes false.
 
 // var password = '1234'
@@ -273,8 +273,8 @@
 //* Do-While Loop
 //* ===============================
 
-//? Do...While Loop: A do...while loop in JavaScript is similar to a while loop, 
-// but it guarantees that the loop body will be executed at least once before 
+//? Do...While Loop: A do...while loop in JavaScript is similar to a while loop,
+// but it guarantees that the loop body will be executed at least once before
 // checking the loop condition. The loop continues to execute while the specified
 // condition is true, and it terminates when the condition becomes false.
 
@@ -298,7 +298,7 @@
 
 //? Common Use Cases:
 //? When you want to guarantee the execution of the loop body at least once.
-//? When the number of iterations is not known beforehand, and you want to validate 
+//? When the number of iterations is not known beforehand, and you want to validate
 // the condition after the first iteration.
 
 //? Example: Validating User Input with a Do...While Loop(user need to write a valid number) 🧑‍💻
@@ -315,8 +315,8 @@
 //* For Loop
 //* ===============================
 
-//? For Loop: A for loop in JavaScript is a control flow statement that allows 
-// you to repeatedly execute a block of code a specified number of times. 
+//? For Loop: A for loop in JavaScript is a control flow statement that allows
+// you to repeatedly execute a block of code a specified number of times.
 // It's particularly useful when you know the exact number of iterations needed.
 
 // example: for (initialization; condition; iteration) {
@@ -339,15 +339,15 @@
 // }
 
 //? Key Point:
-// The initialization, condition, and iteration expressions are optional. 
+// The initialization, condition, and iteration expressions are optional.
 // You can omit any or all of them, but you must include the semicolons.
 
-//*The code for (;;) {} represents an infinite loop in JavaScript. 
-// This construct is commonly used when you want a loop to run indefinitely 
+//*The code for (;;) {} represents an infinite loop in JavaScript.
+// This construct is commonly used when you want a loop to run indefinitely
 // or until a break statement is encountered within the loop. It's equivalent to while (true) {}.
 
 //* use case: Game Development:
-//? In game development, an infinite loop can be used to continuously 
+//? In game development, an infinite loop can be used to continuously
 // update and render game frames until a specific condition (e.g., game over) is met.
 
 // for (;;) {
@@ -395,29 +395,6 @@
 //? If a year is divisible by 400,
 // then it is a leap year. Otherwise, it is not a leap year.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // var year = 2020;
 
 // if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
@@ -436,44 +413,18 @@
 //*       4    *    *    *    *    -
 //*       5    *    *    *    *    *
 
-for (let i = 1; i <= 5; i++) {
-    for (let j = 1; j <= i; j++) {
-        document.writeln('⭐');
-    }
-    document.write('<br>')
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// for (let i = 1; i <= 5; i++) {
+//     for (let j = 1; j <= i; j++) {
+//         document.writeln('⭐');
+//     }
+//     document.write('<br>')
+// }
 
 
 // for (var i = 1; i <= 5; i++) {
 //   var pattern = "";
 //   for (var j = 1; j <= i; j++) {
 //     pattern = pattern + " *";
-//   }
-//   console.log(pattern);
+// }
+// console.log(pattern);
 // }
