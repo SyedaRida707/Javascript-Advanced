@@ -7,7 +7,7 @@
 
 // javascript is used to update and change both HTML and CSS.
 // it adds behaviour to web pages.
-// $0 on console change by $0
+// on console change by $0 any tag data
 
 // =========================================
 // History of javascript
@@ -24,20 +24,20 @@
 // console.log('hi i am print on console');
 
 // three ways to use js
+// Inline,Internal,External
 
+// ====================================
+// Values and Variable in JavaScript
+// ====================================
 
-//* ====================================
-//* Values and Variable in JavaScript
-//* ====================================
-
-//* In JavaScript, values and variables are fundamental
+// In JavaScript, values and variables are fundamental
 // concepts that form the basis of programming.
 
-//* Values:  A value is a piece of information that a program can work with.
+// Variables: A variable is a container that holds a value. It has a name
+// and can be used to store and manipulate data in a program.
+// Values:  A value is a piece of information that a program can work with.
 //  It can be a number, text, true/false, or more complex data.
 
-//* Variables: A variable is a container that holds a value. It has a name
-// and can be used to store and manipulate data in a program.
 
 // valid variable name
 // var my_data = 'rida'
@@ -57,7 +57,7 @@
 // Data types define the type of values that a variable can hold.
 
 // Types of Primitive Data types
-//  hold only single value
+// hold only single value
 
 // Number: Represents numeric values, including integers and floating-point numbers.
 // Example:
@@ -210,7 +210,7 @@
 // doesn't yield a valid number.
 // Also, to check whether a value is number or not we can use isNaN() function.
 
-// console.log(isNaN("vinod"));
+// console.log(isNaN("Rida"));
 // console.log(parseInt("xyz"));
 // console.log(parseInt("@#$"));
 
