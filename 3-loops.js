@@ -367,6 +367,7 @@
 // for (var num = 1; num <= 10; num++) {
 //   var sum = sum + num;
 // }
+// at the end of the loop the num value is 11 and not run loop
 // console.log(sum);
 
 //! Generating a Times Table:🧑‍💻
@@ -383,12 +384,39 @@
 // }
 
 //! Homework ➡️ JavaScript program to print table for given number (8,9,12,15) using for Loop?
+// let getNum = +prompt('enter any num you want table?');
+// for (let i = 1; i <= 10; i++) {
+//     console.log(getNum, ' x ', i, ' = ', getNum * i);
+// }
 
 //? More Practice
 //!1: program To check if a year is a leap year🧑‍💻
 //? If a year is divisible by 4 and not divisible by 100, or
 //? If a year is divisible by 400,
 // then it is a leap year. Otherwise, it is not a leap year.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // var year = 2020;
 
@@ -407,6 +435,40 @@
 //*       3    *    *    *    -    -
 //*       4    *    *    *    *    -
 //*       5    *    *    *    *    *
+
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+        document.writeln('⭐');
+    }
+    document.write('<br>')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // for (var i = 1; i <= 5; i++) {
 //   var pattern = "";
