@@ -160,7 +160,7 @@
 //! Example 1: Returning a Sum of two number
 
 // function sum(a, b) {
-    // console.log(a + b);
+// console.log(a + b);
 //   return a + b;
 //   console.log("hello I am function");
 // }
@@ -187,6 +187,14 @@
 //   // code to be executed
 // })();
 
+// (function Run() {
+//   console.log('hello'); 
+// })();
+
+// let run = (() => {
+//     console.log('hello');
+// })();
+
 // var result = (function (a, b) {
 //   console.log(a + b);
 //   return a + b;
@@ -199,7 +207,7 @@
 //? Interview Questions
 
 //! Question 1: Calculator Function
-//! Write a JavaScript function calculator that takes two numbers and an operator as 
+//! Write a JavaScript function calculator that takes two numbers and an operator as
 // parameters and returns the result of the operation. The function should support addition,
 // subtraction, multiplication, and division.
 
@@ -240,19 +248,30 @@
 
 //! Reverse a String:
 //! Write a function to reverse a given string without using built-in reverse methods.
-
-// const isReverse = (str) => {
-//   let reverse = "";
-//   for (let char = str.length - 1; char >= 0; char--) {
-//     reverse = reverse + str[char];
-//   }
-//   return reverse;
+// let reverseWord = (str) => {
+//     let reverse = '';
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         reverse += str[i];
+//         console.log( str[i]);
+//     }
+//     return reverse;
 // };
+// console.log(reverseWord('rida'));
 
-// console.log(isReverse("vinod thapa"));
 
 //! Palindrome Check:
 //! Create a function to determine if a given string is a palindrome (reads the same backward as forward).
+// const isPalindrome = (str) => {
+//     let reverse = '';
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         reverse += str[i];
+//         console.log(str[i]);
+//     }
+//     return str === reverse ? `it is palindrome` : `it is not palindrome`;
+// }
+// console.log(isPalindrome('word'));
+// console.log(isPalindrome('level'));
+
 
 // // isi     isi
 // radar
