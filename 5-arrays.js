@@ -159,7 +159,8 @@
 //*  what if, we want to add or remove anywhere in an elements - p2
 //* ==========================================================================
 
-//? The splice() method of Array instances changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
+//? The splice() method of Array instances changes the contents of an array by removing or replacing 
+// existing elements and/or adding new elements in place
 
 //* syntax
 //? splice(start, deleteCount, item1, item2, /* …, */ itemN)
@@ -178,21 +179,26 @@
 //?👉  Searching and Filter in an Array
 
 //? For Search we have - indexOf, lastIndexOf & includes
-// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// const numberss = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
 
-//?1: indexOf Method: The indexOf method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+//?1: indexOf Method: The indexOf method returns the first index at which a given element can be found 
+// in the array, or -1 if it is not present.
 // syntax
 // indexOf(searchElement);
 // indexOf(searchElement, fromIndex);
-// console.log(numbers.indexOf(4, 5));
+// console.log(numberss.indexOf(2));
+// console.log(numberss.indexOf(4, 5));
 
-//? 2: lastIndexOf Method: The lastIndexOf() method of Array instances returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
-// const numbers = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
+//? 2: lastIndexOf Method: The lastIndexOf() method of Array instances returns the last index 
+// at which a given element can be found in the array, or -1 if it is not present. The array is 
+// searched backwards, starting at fromIndex.
+// const numberss = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
 // const result = numbers.indexOf(6);
 // console.log(result);
-// const result1 = numbers.lastIndexOf(6);
+// const result1 = numberss.lastIndexOf(6);
+// const result1 = numberss.lastIndexOf(6,5);
 // console.log(result1);
-// const result = numbers.indexOf(6, 5);
+// const result = numberss.indexOf(6, 5);
 // console.log(result);
 
 //? 3: The includes method checks whether an array includes a certain element, returning true or false.
@@ -200,8 +206,10 @@
 // includes(searchElement);
 // includes(searchElement, fromIndex);
 
-// const numbers = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
-// const result = numbers.includes(5);
+// const numberss = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
+// const result = numberss.includes(5);
+// const result = numberss.includes(0);
+// const result = numberss.includes(5,3);
 // console.log(result);
 
 //todo Challenge time
@@ -235,7 +243,8 @@
 //? Search +  Filter
 // const numbers = [1, 2, 3, 4, 5, 4, 6, 7, 8, 6, 9];
 
-//? 1: find Method: The find method is used to find the first element in an array that satisfies a provided testing function. It returns the first matching element or undefined if no element is found.
+//? 1: find Method: The find method is used to find the first element in an array that satisfies a
+//  provided testing function. It returns the first matching element or undefined if no element is found.
 
 // const result = numbers.find((curElem) => {
 //   return curElem > 6;
@@ -243,7 +252,9 @@
 
 // console.log(result);
 
-//? 2: findIndex Method: The findIndex() method of TypedArray instances returns the index of the first element in a typed array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
+//? 2: findIndex Method: The findIndex() method of TypedArray instances returns the index of the first
+//  element in a typed array that satisfies the provided testing function. If no elements satisfy the 
+//  testing function, -1 is returned.
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // const result = numbers.map((curElem) => curElem * 5);
@@ -253,14 +264,15 @@
 // });
 // console.log(result2);
 
-//* 3:  filter Method: The filter method creates a new array with all elements that pass the test implemented by the provided function.
+//* 3:  filter Method: The filter method creates a new array with all elements that pass the test 
+// implemented by the provided function.
 // syntax:
 //? filter(callbackFn)
 //? filter(callbackFn, thisArg)
 
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const numberss = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// const result = numbers.filter((curElem) => {
+// const result = numberss.filter((curElem) => {
 //   return curElem > 4;
 // });
 
@@ -269,9 +281,9 @@
 // UseCase: In E-commerce website when we want to Remove or delete any product from addToCart page.
 //! Ex. le'ts say user wants to delete value 6.
 // let value = 6;
-// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// const numberss = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
 
-// let updatedCart = numbers.filter((curElem) => {
+// let updatedCart = numberss.filter((curElem) => {
 //   return curElem !== value;
 // });
 
