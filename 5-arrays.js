@@ -166,11 +166,12 @@
 //? splice(start, deleteCount, item1, item2, /* …, */ itemN)
 // let fruits = ["apple", "orange", "banana", "mango"];
 // fruits.splice(1, 1, "grapes");
+// console.log(fruits.splice(1, 1, "grapes"));
 // console.log(fruits);
 
 // //! what if you want to add the element at the end
 // fruits.splice(-1, 0, "grapes");
-// fruits.splice(1, 0, "grapes");
+// fruits.splice(fruits.length, 0, "grapes");
 // console.log(fruits);
 
 //* =========================================
@@ -255,9 +256,9 @@
 //? 2: findIndex Method: The findIndex() method of TypedArray instances returns the index of the first
 //  element in a typed array that satisfies the provided testing function. If no elements satisfy the 
 //  testing function, -1 is returned.
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-// const result = numbers.map((curElem) => curElem * 5);
+// const numberss = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// // chaining
+// const result = numberss.map((curElem) => curElem * 5);
 // console.log(result);
 // const result2 = result.findIndex((curElem) => {
 //   return curElem > 15;
@@ -282,28 +283,22 @@
 //! Ex. le'ts say user wants to delete value 6.
 // let value = 6;
 // const numberss = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
-
 // let updatedCart = numberss.filter((curElem) => {
 //   return curElem !== value;
 // });
-
 // console.log(updatedCart);
 
 // Practice time
 // !Example 2: Filtering Products by Price
 // const products = [
-//   { name: "Laptop", price: 1200 },
-//   { name: "Phone", price: 800 },
-//   { name: "Tablet", price: 300 },
-//   { name: "Smartwatch", price: 150 },
+//     { name: "Laptop", price: 1200 },
+//     { name: "Phone", price: 800 },
+//     { name: "Tablet", price: 300 },
+//     { name: "Smartwatch", price: 150 },
 // ];
 // // Filter products with a price less than or equal to 500
-
-// const filterProducts = products.filter((curElem) => {
-//   //   console.log(curElem.price <= 500);
-//   return curElem.price <= 500;
-// });
-// console.log(filterProducts);
+// const result = products.filter((value) => value.price <= 500);
+// console.log(result);
 
 // //! Filter unique values
 // const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
