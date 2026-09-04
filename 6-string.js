@@ -191,27 +191,31 @@
 // =========================================
 // Extracting String Characters
 // =========================================
-//! Extracting String Characters
+// Extracting String Characters
 // There are 3 methods for extracting string characters:
 
-//? The charAt(position) Method
-//? The charCodeAt(position) Method
-//? The at(position) Method
+// The charAt(position) Method
+// The charCodeAt(position) Method
+// The at(position) Method
 
-//? charAT() : The charAt() method returns the character at a specified index (position) in a string
+// charAT() : The charAt() method returns the character at a specified index (position) in a string 
+// give empty string if not found character - index value not valid for charAt()
 // let text = "Hello JavaScript, welcome to our world best JavaScript course";
 // let result = text.charAt(6);
 // let result = text.charAt(-6);
 // console.log(result);
 
-//? charCodeAt() : The charCodeAt() method returns the code of the character at a specified index in a string. The method returns a UTF-16 code (an integer between 0 and 65535).
+// charCodeAt() : The charCodeAt() method returns the code of the character at a specified 
+// index in a string. The method returns a UTF-16 code (an integer between 0 and 65535).
 // let text = "Hello JavaScript, welcome to our world best JavaScript course";
 // let result = text.charCodeAt(6);
 // console.log(result);
 
 //todo ES2022 introduced the string method at():
-//? The at() method returns the character at a specified index (position) in a string. The at() method returns the same as carAt().
+// The at() method returns the character at a specified index (position) in a string. 
+// The at() method returns the same as charAt().
 // let text = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = text.at(6);
 // let result = text.at(-6);
 // console.log(result);
 
@@ -219,6 +223,8 @@
 // The at() method is a new addition to JavaScript.
 // It allows the use of negative indexes while charAt() do not.
 // Now you can use myString.at(-2) instead of charAt(myString.length-2).
+// let result = text.charAt(text.length - 1);
+// console.log(result);
 
 //* =========================================
 //* Replacing String Content:
@@ -229,17 +235,20 @@
 // const newStr = str.replace("World", "JavaScript");
 // console.log(newStr); // Outputs: Hello, JavaScript!
 
-//? Case-Insensitive Replacement: To perform a case-insensitive replacement, you can use the i flag in the regular expression.
+//Case-Insensitive mean (Do not consider the difference between uppercase and lowercase letters.)
+//  Case-Insensitive Replacement: To perform a case-insensitive replacement,
+//  you can use the i flag in the regular expression.
 // let originalString = "Hello, World! How are you, World?";
-// let replacedString = originalString.replace(/world/gi, "vinod");
+// let replacedString = originalString.replace(/world/i, "Rida");
+// let replacedString = originalString.replace(/world/gi, "Rida");
 // console.log(replacedString);
 
-//* =========================================
-//* Other Useful Methods:
-//* =========================================
+// =========================================
+// Other Useful Methods:
+// =========================================
 
-//! Other Useful Methods:
-//? toUpperCase and toLowerCase: Converts the string to uppercase or lowercase.
+// Other Useful Methods:
+// toUpperCase and toLowerCase: Converts the string to uppercase or lowercase.
 // const str = "JavaScript";
 // console.log(str.toUpperCase()); // Outputs: JAVASCRIPT
 // console.log(str.toLowerCase()); // Outputs: javascript
@@ -247,48 +256,48 @@
 //? trim: Removes whitespace from both ends of the string.
 // const str = "   Hello, World!   ";
 // console.log(str.length);
-
 // let trimStr = str.trim();
 // console.log(trimStr);
 // console.log(trimStr.length);
 
 //? split: Splits the string into an array of substrings based on a specified delimiter.
+// Substring = string ka chhota part.
 // const str = "apple,orange,banana";
+// let newarr = str.split(',');
+// console.log(newarr);
+// console.log(newarr.reverse());
+// console.log(newarr.join(','));
 // let strArr = str.split(",").reverse().join();
 // console.log(strArr);
 
-//* =========================================
-//* //! Interview Questions
-//* =========================================
+// =========================================
+//  Interview Questions
+// =========================================
 
-//! 1: Write a JavaScript function that prints the letters 'a' through 'z' in the console. You should use a loop to iterate through the letters and print each one on a new line.
-
+// 1: Write a JavaScript function that prints the letters 'a' through 'z' in the console. 
+// You should use a loop to iterate through the letters and print each one on a new line.
 // console.log("a".charCodeAt(0));
 // console.log("z".charCodeAt(0));
-
-// for (let char = 97; char <= 122; char++) {
-//   console.log(String.fromCharCode(char));
+// for(let i = 97; i <= 122; i++){
+// //  console.log(i);
+// //  give value based on code into
+//  console.log(String.fromCharCode(i).toUpperCase());
 // }
 
-//! 2: Write a function to count the number of vowels in a string?
-
-// const countVowels = (str) => {
-//   const vowels = "aeiou";
-//   let count = 0;
-//   for (let char of str) {
-//     console.log(char);
-//     // console.log(str.includes(char));
-//     if (vowels.includes(char)) {
-//       count++;
+// 2: Write a function to count the number of vowels in a string?
+// function countVowels(word) {
+//     let count = 0;
+//     let vowels = 'aeiou'
+//     for (let w of word) {
+//         if (vowels.includes(w)) {
+//             count++;
+//         }
 //     }
-//   }
-//   return count;
-// };
-//   console.log(checkAllVowelPresentOrNot("my name u is vinod @  thapa"));
-// console.log(countVowels("Hello a i o u world"));
+//     return count
+// }
+// console.log(countVowels('rida'));
 
-//! 3: Write a function to check if all the vowels presents in a string or not?
-
+// 3: Write a function to check if all the vowels presents in a string or not?
 // const checkAllVowelPresentOrNot = (str) => {
 //   const vowels = "aeiou";
 //   for (let char of vowels) {
@@ -301,9 +310,14 @@
 //   return true;
 // };
 
-// console.log(checkAllVowelPresentOrNot("my name u is vinod @  thapa"));
+// console.log(checkAllVowelPresentOrNot("syedaiou"));
 
 //! 4: Write a JavaScript function to check if the given sting is Pangram or not?
+
+
+
+
+
 
 // const pangramChecker = (str) => {
 //   let inputArr = str.toLowerCase().split("");
