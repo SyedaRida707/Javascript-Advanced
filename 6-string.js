@@ -18,29 +18,33 @@
 // \'	    '	        Single quote
 // \"	    "	        Double quote
 // \\	    \	        Backslash
+// \n    New line
+// \t    Tab space
 // let text = "My name is " Rida " & I am a Full Stack Developer. ";
 // let text = 'My name is " Rida " & I am a Full Stack Developer. ';
 // let text = 'My name is " Rida " & \\ I am a \'Full Stack Developer.\' ';
 // let text = "My name is ' Rida ' & \\ I am a \"Full Stack \" Developer. ";
+// let text = 'hello \nworld';
 // console.log(text);
 
 // =========================================
 // String Search Methods
 // =========================================
 
-//? 2: String Search Methods
-//? a:  indexOf(): The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:
+// 2: String Search Methods
+// a:  indexOf(): The indexOf() method returns the index (position) of the first occurrence of a 
+// string in a string, or it returns -1 if the string is not found:
 // syntax
 // indexOf(searchString)
 // indexOf(searchString, position)
 
-// let text = "Vinod Thapa";
-// console.log(text.indexOf("thapa"));
+// let text = "Rida Abid";
+// console.log(text.indexOf("abid"));
 // The indexOf() method is case sensitive.
-// console.log(text.indexOf("Thapa"));
+// console.log(text.indexOf("Abid"));
 
 // let strArr = Array.from(text);
-// // console.log(strArr);
+// console.log(strArr);
 // let strMap = strArr.map((curElem, index) => `${curElem} - ${index}`);
 // console.log(strMap);
 
@@ -49,43 +53,48 @@
 // lastIndexOf(searchString)
 // lastIndexOf(searchString, position)
 
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let index = text.indexOf("JavaScript");
-// let index = text.lastIndexOf("JavaScript");
-// let index = text.lastIndexOf("JavaScript", 40);
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let index = texts.indexOf("JavaScript");
+// let index = texts.lastIndexOf("JavaScript");
+// let index = texts.lastIndexOf("JavaScript", 40);
 // console.log(index);
 
-//? c:  search(): The search() method searches a string for a string (or a regular expression) and returns the position of the match.
+//? c:  search(): The search() method searches a string for a string 
+// (or a regular expression) and returns the position of the match.
 //* Returns the index number where the first match is found. Returns -1 if no match is found.
 
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = text.search(/Javascript/i);
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = texts.search('javascript');
+// let result = texts.search('JavaScript');
+// let result = texts.search(/Javascript/i);
 // console.log(result);
-
 //*👉 Important Tips
 // The search() method cannot take a second start position argument.
 // The indexOf() method cannot take powerful search values (regular expressions).
 // They accept the same arguments (parameters), and return the same value
 
-//? match() : Returns an array of the matched values or null if no match is found.
+// match() : Returns an array of the matched values or null if no match is found.
 
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = text.match("Javascript");
-// let result = text.match("JavaScript");
-//todo here the js converts the normal text into regular expression text.match(/JavaScript/); without the g flag
-// let result = text.match(/Javascript/gi);
-
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = texts.match("Javascript");
+// let result = texts.match("JavaScript");
+//todo here the js converts the normal text into regular expression text.match(/JavaScript/); 
+// without the g flag return 1 match with g return all matches.
+// let result = texts.match(/Javascript/gi);
 // console.log(result);
 
-//? matchAll() : Returns an iterator of all matches, providing detailed information about each match. Returns an empty iterator if no match is found.
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let matchResult = text.matchAll("javascript");
-// let matchResult = text.matchAll("JavaScript");
-//todo  here the js converts the normal text into regular expression text.match(/JavaScript/g); also adds the g flag at the end
-
+// matchAll() : Returns an iterator of all matches, providing detailed information about each match.
+//  Returns an empty iterator if no match is found.
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let matchResult = texts.matchAll("javascript");
+// let matchResult = texts.matchAll("JavaScript");
+//todo  here the js converts the normal text into regular expression text.match(/JavaScript/g);
+//also adds the g flag at the end
+// console.log(matchResult);
 // console.log(...matchResult);
 
 // for (let item of matchResult) {
+//   console.log(item);
 //   console.log(item[0]);
 // }
 
@@ -93,97 +102,95 @@
 //   console.log(index.index);
 // }
 
-// for (let { index } of matchResult) {
+// for (let {index} of matchResult) {
 //   console.log(index);
 // }
 
 //? includes(): Returns true if the string contains the specified value, and false otherwise.
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let includeResult = text.includes(/java/i);
-// let includeResult = text.includes("J");
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let includeResult = texts.includes("j");
+// let includeResult = texts.includes(/java/i);
+// let includeResult = texts.includes("J");
 // console.log(includeResult);
-
 // Note: includes() is case sensitive. includes() is an ES6 feature.
 
-//? startsWith(): The startsWith() method returns true if a string begins with a specified value.Otherwise it returns false:
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = text.startsWith("Helcome");
-// let result = text.startsWith("Hello");
+// startsWith(): The startsWith() method returns true if a string begins with a specified value.
+// Otherwise it returns false:
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = texts.startsWith("Helcome");
+// let result = texts.startsWith("Hello");
+// start position for the search can be specified
+// let result = texts.startsWith("welcome", 18);
+// let result = texts.startsWith("welcome", 17);
 // console.log(result);
 
-//* start position for the search can be specified
-// let result = text.startsWith("welcome", 18);
-// let result = text.startsWith("welcome", 17);
-// console.log(result);
+// endsWith(): The endsWith() method returns true if a string ends with a specified value. 
+// Otherwise it returns false:
 
-//? endsWith(): The endsWith() method returns true if a string ends with a specified value. Otherwise it returns false:
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = texts.endsWith("welcome");
+// let result = texts.endsWith("course");
 
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = text.endsWith("welcome");
-// let result = text.endsWith("course");
-// console.log(result);
 
-//* =========================================
-//* Extracting String Parts:
-//* =========================================
-//! Extracting String Parts:
-
-//? String.prototype.substr() it is deprecated  ❌
+// =========================================
+// Extracting String Parts:
+// =========================================
+// String.prototype.substr() it is deprecated  ❌
 
 //? a: slice() extracts a part of a string and returns the extracted part in a new string.
 // syntax
 // slice(start, end);
 
-// Todo  JavaScript counts positions from zero.
-//? First position is 0. Second position is 1.
-
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = text.slice(6);
-// let result = text.slice(6, 15);
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = texts.slice(6);
+// let result = texts.slice(6, 16);
 // console.log(result);
 
 // subString() substring()
-
-//? a: substring: Extracts a portion of the string based on starting and ending indices.
-//* camelCase is used to separate words, substring is not to be intended as Sub String but as Substring
+// a: substring: Extracts a portion of the string based on starting and ending indices.
+// camelCase is used to separate words, substring is not to be intended as Sub String but as Substring
 // syntax
 // substring(indexStart) // index starts with 0
 // substring(indexStart, indexEnd)
 
-//* substring() is similar to slice(). The difference is that start and end values less than 0 are treated as 0 in substring().
+// substring() is similar to slice(). The difference is that start and end values less than 0 
+// are treated as 0 in substring().
 
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = text.slice(-6);
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = texts.slice(-6);
+
+// start = 6 aur end = 0
+// substring() inko swap kar deta hai:
+// let result = texts.substring(6,-6);
 // console.log(result);
 
-//! Homework
-// let text = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = text.substring(0);
-// let result = text.substring(1);
-// let result = text.substring(-5);
+// Homework
+// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = texts.substring(0);
+// let result = texts.substring(1);
+// let result = texts.substring(-5);
 // console.log(result);
 
-//! similarities
-//todo  In both the slice() and substring() methods, the end parameter indicates the ending index up to which the extraction occurs, but the character at the end index is excluded from the extracted substring.
+// similarities
+// todo  In both the slice() and substring() methods, the end parameter indicates the ending 
+// index up to which the extraction occurs, but the character at the end index is excluded 
+// from the extracted substring.
 
-//* =========================================
-//* Interview Question
-//* =========================================
-//! What is the output for the following code?
+// Interview Question
+// What is the output for the following code?
 
 // let text = "Hello JavaScript, welcome to our world best JavaScript course";
 // let result = text.slice(1);
 // let result = text.replace("H", "");
 // let result = text.substring(1);
-//? Optional
-// let result = text.replace("JavaScript", "Vinod");
-// let result = text.replaceAll("JavaScript", "Vinod");
-
+// Optional
+// let result = text.replace("JavaScript", "Rida");
+// let result = text.replaceAll("JavaScript", "Rida");
 // console.log(result);
 
-//* =========================================
-//* Extracting String Characters
-//* =========================================
+// =========================================
+// Extracting String Characters
+// =========================================
 //! Extracting String Characters
 // There are 3 methods for extracting string characters:
 
