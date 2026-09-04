@@ -209,6 +209,11 @@
 // index in a string. The method returns a UTF-16 code (an integer between 0 and 65535).
 // let text = "Hello JavaScript, welcome to our world best JavaScript course";
 // let result = text.charCodeAt(6);
+// let result = text.charCodeAt(0);
+// console.log('H'.charCodeAt());
+// 0 for readeability 0 is always starting index is H
+// console.log('Happy'.charCodeAt(0));
+
 // console.log(result);
 
 //todo ES2022 introduced the string method at():
@@ -295,7 +300,7 @@
 //     }
 //     return count
 // }
-// console.log(countVowels('rida'));
+// console.log(countVowels('ridaaa'));
 
 // 3: Write a function to check if all the vowels presents in a string or not?
 // const checkAllVowelPresentOrNot = (str) => {
@@ -309,16 +314,9 @@
 //   }
 //   return true;
 // };
-
 // console.log(checkAllVowelPresentOrNot("syedaiou"));
 
-//! 4: Write a JavaScript function to check if the given sting is Pangram or not?
-
-
-
-
-
-
+// 4: Write a JavaScript function to check if the given string is Pangram or not?
 // const pangramChecker = (str) => {
 //   let inputArr = str.toLowerCase().split("");
 //   // console.log(inputArr);
@@ -328,11 +326,10 @@
 //       curElem.charCodeAt() >= "a".charCodeAt() &&
 //       curElem.charCodeAt() <= "z".charCodeAt()
 //   );
-//   // console.log(values);
+// //   console.log(values);
 
 //   return new Set(values).size === 26;
 
 //   // return [...new Set(values)].length === 26;
 // };
-
 // console.log(pangramChecker("The quick  @ brown fox jumps ove the lazy dog"));
