@@ -301,56 +301,65 @@
 // console.log(result);
 
 // //! Filter unique values
-// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
-// let uniqueValues = numbers.filter((curElem, index, arr) => {
+// const numberss = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// let uniqueValues = numberss.filter((curElem, index, arr) => {
 //   //   console.log(index);
 //   //   console.log(arr.indexOf(curElem));
 //   return arr.indexOf(curElem) === index;
 // });
 // console.log(uniqueValues);
-// console.log([...new Set(numbers)]);
+// it will give new value.
+// console.log([...new Set(numberss)]); //Duplicate values hata kar naya array return karta hai
 
 //* =========================================
 //*  How to Sort and Compare an Array
 //* =========================================
 //? How to Sort and Compare an Array
-//? Sorting an Array: The sort method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements as strings.
+//? Sorting an Array: The sort method sorts the elements of an array in place and returns 
+// the sorted array. By default, it sorts elements as strings.
 
 // const fruits = ["Banana", "Apple", "Orange", "Mango"];
-// const numbers = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
-
-// console.log(numbers);
+// console.log(fruits.sort());
+const numberss = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
+// console.log(numberss.sort());
 
 //? compare callback function
 // syntax
-// const sortedNumbers = numbers.sort((a, b) => a - b);
+// const sortedNumbers = numberss.sort((a, b) => a - b);
+// const sortedNumbers = numberss.sort((a, b) => b - a);
+// console.log(numberss);
+
 // if(a>b) return 1  => switch the order
 //  if(b>a) return -1  => keep the order
 
-// numbers.sort((a, b) => {
+// numberss.sort((a, b) => {
 //   if (a > b) return -1;
 //   if (b > a) return 1;
 // });
 
-// console.log(numbers);
+// console.log(numberss);
 
 //? For ascending order
-// const sortedNumbers = numbers.sort((a, b) => {
+// const sortedNumbers = numberss.sort((a, b) => {
 //   if (a > b) {
 //     return 1;
 //   } else if (b > a) {
 //     return -1;
 //   }
 // });
+// console.log(numberss);
+
 
 //? For descending order
-// const sortedNumbers = numbers.sort((a, b) => {
+// const sortedNumbers = numberss.sort((a, b) => {
 //   if (a > b) {
 //     return -1;
 //   } else if (b > a) {
 //     return 1;
 //   }
 // });
+// console.log(numberss);
+
 //* =========================================
 //*  Very Important Array Methods
 //* =========================================
@@ -369,29 +378,28 @@
 // let result = numbers.map((curElem) => curElem * curElem);
 // console.log(result);
 
-//! 1: Using the map method, write a function that takes an array of strings and returns a new array where each string is capitalized.
+//! 1: Using the map method, write a function that takes an array of strings and returns a 
+// new array where each string is capitalized.
 // Original array of strings
-const words = ["APPLE", "banana", "cherry", "date"];
-
-// const result = words.map((curElem) => {
-//   return curElem.toLowerCase();
+// const words = ["APPLE", "banana", "cherry", "date"];
+// const newWords = words.map((v)=>{
+//   return v.toLowerCase();
 // });
+// console.log(newWords);
 
-// console.log(result);
 
-//! 2: Using the map method, write a function that takes an array of numbers and returns a new array where each number is squared, but only if it's an even number.
+//! 2: Using the map method, write a function that takes an array of numbers and 
+// returns a new array where each number is squared, but only if it's an even number.
 
 // Original array of numbers
-const numbers = [1, 2, 3, 4, 5];
-
-// const result = numbers
+// const numbers = [1, 2, 3, 4, 5];
+// const result = numberss
 //   .map((curElem) => {
 //     if (curElem % 2 === 0) {
 //       return curElem * curElem;
 //     }
 //   })
 //   .filter((curElem) => curElem !== undefined);
-
 // console.log(result);
 
 // const evenSquare = numbers
@@ -400,14 +408,18 @@ const numbers = [1, 2, 3, 4, 5];
 
 // console.log(evenSquare);
 
-//! 3: Using the map method, write a function that takes an array of names and returns a new array where each name is prefixed with "Mr. ".
+//! 3: Using the map method, write a function that takes an array of names and returns a new 
+// array where each name is prefixed with "Mr. ".
 
 // const names = ["ram", "vinod", "laxman"];
 // const prefixName = names.map((curName) => `Mr. ${curName}`);
 // console.log(prefixName);
 
 //? Reduce method
-// The reduce method in JavaScript is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
+// The reduce method in JavaScript is used to accumulate or reduce an array to a single value.
+//  It iterates over the elements of an array and applies a callback function to each element,
+//  updating an accumulator value with the result. The reduce method takes a callback function as 
+// its first argument and an optional initial value for the accumulator as the second argument.
 // syntax
 // array.reduce(function callback(accumulator, currentValue, index, array) {
 //   // Your logic here
@@ -419,7 +431,8 @@ const numbers = [1, 2, 3, 4, 5];
 // currentValue: The current element being processed in the array.
 // index (optional): The index of the current element being processed.
 // array (optional): The array reduce was called upon.
-// initialValue (optional): An initial value for the accumulator. If not provided, the first element of the array is used as the initial accumulator value.
+// initialValue (optional): An initial value for the accumulator. If not provided, 
+// the first element of the array is used as the initial accumulator value.
 
 // const productPrice = [100, 200, 300, 400, 500];
 
@@ -428,3 +441,4 @@ const numbers = [1, 2, 3, 4, 5];
 // }, 0);
 
 // console.log(totalPrice);
+
