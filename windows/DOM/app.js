@@ -143,13 +143,28 @@
 // for readable
 // console.log(...document.getElementsByClassName('best'));
 
+// The `innerHTML` property returns the complete content, including all HTML tags, inside the `p` 
+// elements and their text content.
+// Example using `innerText`: Prints text as it appears on screen, considering styling and excluding hidden text.
+// Example using `textContent`: Prints text as it is in the markup, including hidden text and without 
+// considering styling.all text without HTML tag.
+ 
 // let get = document.getElementsByClassName('best');
 // for (let v of get) {
-//     console.log(v);
+//     // innerHTML = HTML + text ,innerText = visible text , textContent = all text without HTML tags or not visible
+//     console.log(v.innerHTML);
+//     console.log(v.innerText);
+//     console.log(v.textContent);
 // }
+// give error
+// console.log(...document.getElementsByClassName('best').innerHTML);
 
 // getElementsByTagName(tagName): Find elements with a specific tag name.
 // console.log(document.getElementsByTagName('h2'));
+// let get = document.getElementsByTagName('span');
+// for(let v of get){
+//     console.log(v);
+// }
 
 // querySelector(selector): Find the first element that matches the specified CSS selector.
 // console.log(document.querySelector('h2'));
