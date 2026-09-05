@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body>
+    <h1>Js Window Object</h1>
+
+    <!-- ========== Start Window Propertey ========== -->
+    <button onclick="window.open('https://github.com/SyedaRida707','_blank')">Navigate</button>
+    <!-- ========== End Window Propertey ========== -->
+
+    <!-- ========== Start History ========== -->
+    <h1>Js History Object</h1>
+    <button onclick="history.back()">Go Back</button>
+    <button onclick="history.forward()">Go Forward</button>
+
+    <!-- history.go(-1); // 1 page back
+    history.go(-2); // 2 pages back
+    
+    history.go(1); // 1 page forward
+    history.go(2); // 2 pages forward -->
+    <button onclick="history.go(2)">Move Back or Forward</button>
+    <!-- ========== End History ========== -->
+
+   <!-- ========== Start Location ========== -->
+    <h1>Js Location Object</h1>
+   <button onclick="location.reload()">Reload the Page</button>
+   <!-- problem is in replace jis page pr hai ussi pr location run hori and dont have back option -->
+   <!-- replace the existing page -->
+   <button onclick="location.replace('https://github.com/SyedaRida707')">Navigate Page using replace</button>
+   <!-- Purpose: Assigns a new URL to the current window, effectively navigating to a new page. -->
+   <!-- assign a new page url -->
+   <button onclick="location.assign('https://github.com/SyedaRida707')">Navigate Page using assign</button>
+   <!-- ========== End Location ========== -->
+   
+
+   <!-- ========== Start Screen Object ========== -->
+    <h1>Js Screen Object</h1>
+    <p>We will see on console</p>
+   <!-- ========== End Screen Object ========== -->
+   
+    <!-- <script src="app.js"></script> -->
+
+    <script>
+        window.alert('hi');
+    </script>
+</body>
+
+</html>
