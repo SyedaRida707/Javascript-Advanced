@@ -136,9 +136,17 @@
 // ==============================
 // getElementById(id): Find an element by its ID.
 // console.log(document.getElementById('heading'));
+// console.log(document.getElementById('#heading')); ❌
 
 // getElementsByClassName(className): Find elements with a specific class name.
 // console.log(document.getElementsByClassName('best'));
+// for readable
+// console.log(...document.getElementsByClassName('best'));
+
+// let get = document.getElementsByClassName('best');
+// for (let v of get) {
+//     console.log(v);
+// }
 
 // getElementsByTagName(tagName): Find elements with a specific tag name.
 // console.log(document.getElementsByTagName('h2'));
@@ -179,13 +187,13 @@
 //? forEach (Array.from): Iterate through NodeList or convert to an array for more flexible manipulation.
 
 // Very important
-// When you use the browser's developer tools console to select an element and change 
-// its text content using JavaScript, you are directly manipulating the DOM object in memory. 
-// Since the DOM is a live representation of the document, any changes you make to the DOM 
+// When you use the browser's developer tools console to select an element and change
+// its text content using JavaScript, you are directly manipulating the DOM object in memory.
+// Since the DOM is a live representation of the document, any changes you make to the DOM
 // objects are immediately reflected in the rendered web page.
 
-// However, these changes are typically temporary and exist only in the current session. 
-// When you refresh the page or navigate away, the browser reloads the original HTML 
-// document from the server, and the DOM is reconstructed during the parsing process. 
-// Any modifications made to the DOM objects during the previous session are lost, and 
+// However, these changes are typically temporary and exist only in the current session.
+// When you refresh the page or navigate away, the browser reloads the original HTML
+// document from the server, and the DOM is reconstructed during the parsing process.
+// Any modifications made to the DOM objects during the previous session are lost, and
 // the page reverts to its original state.
