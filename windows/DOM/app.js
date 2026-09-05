@@ -148,7 +148,7 @@
 // Example using `innerText`: Prints text as it appears on screen, considering styling and excluding hidden text.
 // Example using `textContent`: Prints text as it is in the markup, including hidden text and without 
 // considering styling.all text without HTML tag.
- 
+
 // let get = document.getElementsByClassName('best');
 // for (let v of get) {
 //     // innerHTML = HTML + text ,innerText = visible text , textContent = all text without HTML tags or not visible
@@ -168,9 +168,13 @@
 
 // querySelector(selector): Find the first element that matches the specified CSS selector.
 // console.log(document.querySelector('h2'));
+// console.log(document.querySelector('#unique').innerText = 'Syeda');
+// console.log(document.querySelector('.best'));
 
 // querySelectorAll(selector): Find all elements that match the specified CSS selector.
 // console.log(document.querySelectorAll('p'));
+// let get = document.querySelectorAll('p');
+// let value = get.forEach((e) => console.log(e));
 
 // ============================================
 // DOM - CRUD (Create, Read, Update, Delete):
