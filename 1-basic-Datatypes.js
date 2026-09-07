@@ -1,10 +1,7 @@
-// ========================================
 // What is javascript?
 // javascript improves the user experience of the web page by converting it from a
 // static page into an interactive one.
-
 // OR
-
 // javascript is used to update and change both HTML and CSS.
 // it adds behaviour to web pages.
 // on console change by $0 any tag data
@@ -96,6 +93,7 @@
 
 
 // non primitive store multiple values
+// object,functions,Array
 
 // typeof operator
 // var myName = 1;
@@ -155,9 +153,7 @@
 
 // console.log(parseInt('@34'));
 // console.log(parseInt('!134'));
-
-
-//* ==========  Data Types End Section ==========
+// console.log(NaN == NaN);
 
 //* ========== parseInt & parseFloat Section ==========
 // parseInt and parseFloat are both functions in JavaScript used
