@@ -178,14 +178,14 @@
 //TODO  Key Differences:
 //? parseInt is used for converting to integers and ignores anything after the decimal point.
 //? parseFloat is used for converting to floating-point numbers, preserving the decimal part.
-//? Both functions will attempt to convert as much of the string as possible until an invalid
-//  character is encountered.
 
 //! Here are more examples
 // console.log(parseInt("123"));
 // // 123 (default base-10)
+// console.log(parseInt("12378901944", 5)); // use numbers 0 to 4
+ // output 38 because 1 x 5 x 5, 2 x 5, 1x 5 these 3 nums are valid and out put 38
 // console.log(parseInt("123", 10));
-// // 123 (explicitly specify base-10)
+// 123 (explicitly specify base-10) use numbers 0 to 9
 // console.log(parseInt("   123 "));
 // // 123 (whitespace is ignored)
 // console.log(parseInt("077"));
@@ -199,7 +199,6 @@
 // console.log(parseInt("&123"));
 // console.log(parseInt("-123"));
 // console.log(parseInt("xyz"));
-// NaN (input can't be converted to an integer)
 
 // What is the purpose of the NaN value in JavaScript❓
 // NaN stands for "Not a Number" and is returned when a mathematical operation
@@ -210,9 +209,7 @@
 // console.log(parseInt("xyz"));
 // console.log(parseInt("@#$"));
 
-
 // ========== parseInt & parseFloat End Section =========
-
 
 // ============================
 // Data Types Section - part 2
@@ -224,18 +221,29 @@
 // it concatenates the strings together.
 // It's important to note that if any operand of the + operator is a string,
 // JavaScript will treat the other operands as strings as well,
-// resulting in string concatenation. If both operands are numbers, the + operator performs numeric addition.
+// resulting in string concatenation. If both operands are numbers, 
+// the + operator performs numeric addition.
 
 // const str = "Hello " + "World";
 // console.log(str);
 
 // Type coercion is the automatic conversion of "values" from one data type to another.
 // It is a fundamental part of JavaScript and can be used to make code more readable and efficient.
-// There are two types of coercion in JavaScript: implicit and explicit. Implicit coercion happens automatically, while explicit coercion is done manually by the programmer.
-// It's worth noting that type coercion can lead to unexpected results, so it's essential to be aware of how JavaScript handles these situations.
+// There are two types of coercion in JavaScript: implicit and explicit. Implicit coercion happens
+// automatically, while explicit coercion is done manually by the programmer.
 
+// It's worth noting that type coercion can lead to unexpected results, 
+// so it's essential to be aware of how JavaScript handles these situations.
+
+// Implicit coercion = (automatically Tumne conversion nahi ki, JavaScript ne khud ki.)
 // let sum = "5" + 10;
 // console.log(sum);
+
+// Explicit coercion = (tum khud conversion karte ho)
+// console.log(Number('6'));
+
+// Implicit = JavaScript khud convert kare
+// Explicit = tum khud convert karne ko bolo
 
 //* ============================
 //* Tricky Interview Questions
@@ -246,7 +254,7 @@
 // console.log(" " + " ");
 // let sum = " " + 0;
 // console.log(typeof sum);
-// console.log("vinod" - "thapa");
+// console.log("Syeda" - "Rida");
 // console.log(true + true);
 // console.log(true + false);
 // console.log(false + true);
