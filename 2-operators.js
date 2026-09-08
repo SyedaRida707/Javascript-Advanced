@@ -4,6 +4,8 @@
 
 // 1st we will see what is expression means and also what is 
 // operand and operator in any expression?
+// Expression =  6           +            6
+// Expression = Operand + Operator + Operand
 
 //* Types of Operators in JS
 // Assignment operators
@@ -25,7 +27,7 @@
 // examples
 // var myFavNum = 15;
 // Assigns the value 15 to the variable myFavNum
-// var channelName = 'syeda rida'
+// var userName = 'syeda rida'
 
 // ===================================
 // 2: Arithmetic operators
@@ -154,12 +156,14 @@
 //? Greater Than or Equal To (>=):
 // Checks if the value on the left is greater than or equal to the value on the right.
 // Example: 10 >= 10 evaluates to true.
+// console.log(10 >= 10);
 // console.log(10 <= 10);
 
 //? Less Than or Equal To (<=):
 // Checks if the value on the left is less than or equal to the value on the right.
 // Example: 5 <= 10 evaluates to true.
 // console.log(5 >= 10);
+// console.log(5 <= 10);
 
 //* ===================================
 //*  InterView Question
@@ -263,7 +267,8 @@
 
 //? syntax: condition ? expressionIfTrue : expressionIfFalse;
 
-//  write a program to check if the candidates isEligibleForDrive or not? Age must be equal to or greater then 18.
+//  write a program to check if the candidates isEligibleForDrive or not?
+//  Age must be equal to or greater then 18.
 
 // var age = 19;
 // var result = age >= 18 ? "Yes" : "No";
