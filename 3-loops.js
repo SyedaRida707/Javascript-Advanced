@@ -1,11 +1,6 @@
-//* ===============================
 //* Conditional statement Section
-//* ===============================
 
-//* ===============================
 //* If Statement
-//* ===============================
-
 //? If Else:  The if...else statement executes a statement if a
 // specified condition is truthy. If the condition is falsy,
 // another statement in the optional else clause will be executed.
@@ -91,18 +86,17 @@
 
 // var num = 13;
 // var isPrime = true;
-
 // for (var i = 2; i < num; i++) {
-//   if (num % i === 0) {
-//     isPrime = false;
-//     break;
-//   }
+//     if (num % i === 0) {
+//         isPrime = false;
+//         break;
+//     }
 // }
 
 // if (isPrime) {
-//   console.log("Num is prime");
+//     console.log("Num is prime ");
 // } else {
-//   console.log("Num is not prime");
+//     console.log("Num is not prime");
 // }
 
 //! 3: Write a program to check if a number is positive, negative, or zero.
@@ -222,7 +216,8 @@
 //? The default case logs "Sorry, the shape is not available" if areaOfShapes is set to a shape not covered by any existing case.
 
 //! Question: How does the switch statement handle the flow of control based on the value of areaOfShapes?
-//? The switch statement evaluates the value of areaOfShapes and executes the code block corresponding to the matching case. The break statements ensure that only the relevant code block is executed.
+//? The switch statement evaluates the value of areaOfShapes and executes the code block corresponding to the matching case. 
+// The break statements ensure that only the relevant code block is executed.
 
 //* ===============================
 //* While Loop
@@ -367,7 +362,7 @@
 // for (var num = 1; num <= 10; num++) {
 //   var sum = sum + num;
 // }
-// at the end of the loop the num value is 11 and not run loop
+// // at the end of the loop the num value is 11 and not run loop
 // console.log(sum);
 
 //! Generating a Times Table:🧑‍💻
