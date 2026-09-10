@@ -250,7 +250,7 @@ let texts = "Hello JavaScript, welcome to our world best JavaScript course";
 // console.log(newStr); // Outputs: Hello, JavaScript!
 
 //Case-Insensitive mean (Do not consider the difference between uppercase and lowercase letters.)
-//  Case-Insensitive Replacement: To perform a case-insensitive replacement,
+//Case-Insensitive Replacement: To perform a case-insensitive replacement,
 //  you can use the i flag in the regular expression.
 // let originalString = "Hello, World! How are you, World?";
 // let replacedString = originalString.replace(/world/i, "Rida");
@@ -267,16 +267,15 @@ let texts = "Hello JavaScript, welcome to our world best JavaScript course";
 // console.log(str.toUpperCase()); // Outputs: JAVASCRIPT
 // console.log(str.toLowerCase()); // Outputs: javascript
 
-//? trim: Removes whitespace from both ends of the string.
+// trim() removes whitespace from the beginning and end of a string.
 // const str = "   Hello, World!   ";
 // console.log(str.length);
 // let trimStr = str.trim();
 // console.log(trimStr);
-// console.log(trimStr.length);
 
 //? split: Splits the string into an array of substrings based on a specified delimiter.
 // Substring = string ka chhota part.
-// const str = "apple,orange,banana";
+const str = "apple,orange,banana";
 // let newarr = str.split(',');
 // console.log(newarr);
 // console.log(newarr.reverse());
@@ -292,6 +291,7 @@ let texts = "Hello JavaScript, welcome to our world best JavaScript course";
 // You should use a loop to iterate through the letters and print each one on a new line.
 // console.log("a".charCodeAt(0));
 // console.log("z".charCodeAt(0));
+
 // for(let i = 97; i <= 122; i++){
 // //  console.log(i);
 // //  give value based on code into
@@ -327,18 +327,12 @@ let texts = "Hello JavaScript, welcome to our world best JavaScript course";
 
 // 4: Write a JavaScript function to check if the given string is Pangram or not?
 // const pangramChecker = (str) => {
-//   let inputArr = str.toLowerCase().split("");
-//   // console.log(inputArr);
-//   // // console.log("z".charCodeAt());
-//   const values = inputArr.filter(
-//     (curElem) =>
-//       curElem.charCodeAt() >= "a".charCodeAt() &&
-//       curElem.charCodeAt() <= "z".charCodeAt()
-//   );
-// //   console.log(values);
-
-//   return new Set(values).size === 26;
-
-//   // return [...new Set(values)].length === 26;
+//     let inputArr = str.toLowerCase().split("");
+//     const values = inputArr.filter(
+//         (curElem) =>
+//             curElem.charCodeAt() >= "a".charCodeAt() && curElem.charCodeAt() <= "z".charCodeAt()
+//     );
+//     return new Set(values).size === 26;
+//     // return [...new Set(values)].length === 26;
 // };
 // console.log(pangramChecker("The quick  @ brown fox jumps ove the lazy dog"));
