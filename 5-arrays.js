@@ -6,16 +6,19 @@
 // keys (indices) and a length property. The indices are automatically maintained, and the 
 // length property is automatically updated when you add or remove elements from the array.
 
-// typeof Operator: The typeof operator in JavaScript returns "object" for both arrays and regular objects.
+// typeof Operator: The typeof operator in JavaScript returns "object" for both arrays and 
+// regular objects.
 
-//  JavaScript Array is a data structure that allows you to store and organize multiple values within a 
-//  single variable. It is a versatile and dynamic object. It can hold various data types, including numbers,
-//  strings, objects, and even other arrays. Arrays in JavaScript are zero-indexed i.e. the first element is 
+//  JavaScript Array is a data structure that allows you to store and organize multiple 
+//  values within a single variable. It is a versatile and dynamic object. It can hold 
+//  various data types, including numbers, strings, objects, and even other arrays. 
+//  Arrays in JavaScript are zero-indexed i.e. the first element is 
 //  accessed with an index 0, the second element with an index of 1, and so forth.
 
 //  Creating Arrays:
 
-// Arrays in JavaScript can be created using the Array constructor or with array literals (square brackets []).
+// Arrays in JavaScript can be created using the Array constructor or with 
+// array literals (square brackets []).
 
 // Using Array constructor
 // let fruits = new Array('apple', 'orange', 'banana')
@@ -40,7 +43,8 @@
 // ======================================
 //  Modifying Elements:
 // =====================================
-// 👉  Modifying Elements: You can modify array elements by assigning new values to specific indices.
+// 👉  Modifying Elements: You can modify array elements by assigning new values 
+//     to specific indices.
 
 // let fruits = ["apple", "orange", "banana"];
 // fruits[2] = "mango";
@@ -54,8 +58,8 @@
 // let fruits = ["apple", "orange", "mango", "grapes", "banana"];
 
 // 1: for of loop , also known as iterable
-// for...of Loop: is used to iterate over the values of an iterable object, such as arrays, strings, 
-// or other iterable objects.
+// for...of Loop: is used to iterate over the values of an iterable object, 
+// such as arrays, strings, or other iterable objects.
 
 // for (let item of fruits) {
 //   console.log(item);
@@ -72,19 +76,24 @@
 //   console.log(item);
 // }
 
-// higher order function
-//  3: forEach Method
+// =============================================
+// Higher order function
+// =============================================
+
+// 1 forEach Method
 // The arr.forEach() method calls the provided function once for each element of the array. 
 // The provided function may perform any kind of operation on the elements of the given array.
+// forEach() = do something for every item we give an callback function
 
 // let fruits = ["apple", "orange", "mango", "grapes", "banana"];
 // const myForEachArr = fruits.forEach((curElem, index, arr) => {
-//   return `${curElem} ${index}`;
+//     console.log(`${curElem} ${index}`);
+//     return `${curElem} ${index}`;
 //     console.log(arr);
 // });
 // console.log(myForEachArr);
 
-// 4: map function
+// 2 map function
 // map() creates a new array from calling a function for every array element. 
 // map() does not change the original array.
 // let fruits = ["apple", "orange", "mango", "grapes", "banana"];
@@ -117,11 +126,12 @@
 
 // Key Differences
 // Return Value:
-// forEach: It doesn't return a value. The forEach method is used for iterating over the elements of an array 
-// and performing a side effect, such as modifying the array or performing a task for each element.
+// forEach: It doesn't return a value. The forEach method is used for iterating 
+// over the elements of an array and performing a side effect, such as modifying 
+// the array or performing a task for each element.
 
-// map: It returns a new array containing the results of applying a function to each element in the original 
-// array. The original array remains unchanged.
+// map: It returns a new array containing the results of applying a function to 
+// each element in the original array. The original array remains unchanged.
 
 // Chaining:
 // forEach: It doesn't return a value, so it cannot be directly chained with other array methods.
@@ -141,17 +151,17 @@
 // 👉 How to Insert, Add, Replace and Delete Elements in Array(CRUD)
 // let fruits = ["apple", "orange", "mango", "grapes", "banana"];
 
-//? 1: push(): Method that adds one or more elements to the end of an array.
+// 1: push(): Method that adds one or more elements to the end of an array.
+// The push() method returns the new length.
 // console.log(fruits.push("guava"));
 // console.log(fruits);
-// The push() method returns the new length.
-//? 2: pop(): Method that removes the last element from an array.
+// 2: pop(): Method that removes the last element from an array.
 // console.log(fruits.pop());
 // console.log(fruits);
-//? 3: unshift(): Method that adds one or more elements to the beginning of an array.
+// 3: unshift(): Method that adds one or more elements to the beginning of an array.
 // console.log(fruits.unshift("guava"));
 // console.log(fruits);
-//? 4: shift(): Method that removes the first element from an array.
+// 4: shift(): Method that removes the first element from an array.
 // console.log(fruits.shift());
 // console.log(fruits);
 
@@ -159,17 +169,21 @@
 //*  what if, we want to add or remove anywhere in an elements - p2
 //* ==========================================================================
 
-//? The splice() method of Array instances changes the contents of an array by removing or replacing 
+// The splice() method of Array instances changes the contents of an array by 
+// removing or replacing 
 // existing elements and/or adding new elements in place
 
-//* syntax
+//* syntax                                    Inset
 //? splice(start, deleteCount, item1, item2, /* …, */ itemN)
-// let fruits = ["apple", "orange", "banana", "mango"];
+let fruits = ["apple", "orange", "banana", "mango"];
+// replace
 // fruits.splice(1, 1, "grapes");
 // console.log(fruits.splice(1, 1, "grapes"));
 // console.log(fruits);
+// console.log(fruits.splice(0,1,...fruits));
+// console.log(fruits);
 
-// //! what if you want to add the element at the end
+// what if you want to add the element at the end
 // fruits.splice(-1, 0, "grapes");
 // fruits.splice(fruits.length, 0, "grapes");
 // console.log(fruits);
@@ -179,38 +193,39 @@
 //* =========================================
 //?👉  Searching and Filter in an Array
 
-//? For Search we have - indexOf, lastIndexOf & includes
-// const numberss = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+//? For Search we have => indexOf, lastIndexOf & includes
+// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
 
-//?1: indexOf Method: The indexOf method returns the first index at which a given element can be found 
-// in the array, or -1 if it is not present.
+// 1: indexOf Method: The indexOf method returns the first index at which a 
+// given element can be found  in the array, or -1 if it is not present.
 // syntax
 // indexOf(searchElement);
 // indexOf(searchElement, fromIndex);
-// console.log(numberss.indexOf(2));
-// console.log(numberss.indexOf(4, 5));
+// console.log(numbers.indexOf(2));
+// console.log(numbers.indexOf(4, 5));
 
-//? 2: lastIndexOf Method: The lastIndexOf() method of Array instances returns the last index 
+// 2: lastIndexOf Method: The lastIndexOf() method of Array instances returns the last index 
 // at which a given element can be found in the array, or -1 if it is not present. The array is 
 // searched backwards, starting at fromIndex.
-// const numberss = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
+// const numbers = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
 // const result = numbers.indexOf(6);
 // console.log(result);
-// const result1 = numberss.lastIndexOf(6);
-// const result1 = numberss.lastIndexOf(6,5);
+// const result1 = numbers.lastIndexOf(6);
+// const result1 = numbers.lastIndexOf(6,5);
 // console.log(result1);
-// const result = numberss.indexOf(6, 5);
+// const result = numbers.indexOf(6, 5);
 // console.log(result);
 
-//? 3: The includes method checks whether an array includes a certain element, returning true or false.
+// 3: The includes method checks whether an array includes a certain element, 
+//    returning true or false.
 // Syntax
 // includes(searchElement);
 // includes(searchElement, fromIndex);
 
-// const numberss = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
-// const result = numberss.includes(5);
-// const result = numberss.includes(0);
-// const result = numberss.includes(5,3);
+// const numbers = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
+// const result = numbers.includes(5);
+// const result = numbers.includes(0);
+// const result = numbers.includes(5,3);
 // console.log(result);
 
 //todo Challenge time
@@ -218,15 +233,14 @@
 //? 2: What is the return value of splice method?
 //? 3: Update march to March (update)?
 //? 4: Delete June from an array?
-
 // const months = ["Jan", "march", "April", "June", "July"];
-
 // // 1
 // months.splice(months.length, 0, "Dec");
 // // console.log(months);
 
 // // 2:
 // // When used to add elements, the splice method returns an empty array ([]).
+// console.log(months.splice());
 
 // // 3
 // const indexToUpdate = months.indexOf("march");
@@ -244,36 +258,37 @@
 //? Search +  Filter
 // const numbers = [1, 2, 3, 4, 5, 4, 6, 7, 8, 6, 9];
 
-//? 1: find Method: The find method is used to find the first element in an array that satisfies a
-//  provided testing function. It returns the first matching element or undefined if no element is found.
+// 1: find Method: The find method is used to find the first element in an array that 
+//  satisfies a provided testing function. It returns the first matching element or 
+//  undefined if no element is found.
 
 // const result = numbers.find((curElem) => {
 //   return curElem > 6;
 // });
-
 // console.log(result);
 
-//? 2: findIndex Method: The findIndex() method of TypedArray instances returns the index of the first
-//  element in a typed array that satisfies the provided testing function. If no elements satisfy the 
-//  testing function, -1 is returned.
-// const numberss = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// 2: findIndex Method: The findIndex() method of TypedArray instances returns the index of 
+// the first element in a typed array that satisfies the provided testing function. If no 
+// elements satisfy the testing function, -1 is returned.
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // // chaining
-// const result = numberss.map((curElem) => curElem * 5);
+// const result = numbers.map((curElem) => curElem * 5);
 // console.log(result);
 // const result2 = result.findIndex((curElem) => {
 //   return curElem > 15;
 // });
 // console.log(result2);
 
-//* 3:  filter Method: The filter method creates a new array with all elements that pass the test 
-// implemented by the provided function.
+//* 3:  filter Method: The filter method creates a new array with all elements 
+// that pass the test implemented by the provided function.
 // syntax:
 //? filter(callbackFn)
 //? filter(callbackFn, thisArg)
 
-// const numberss = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// const result = numberss.filter((curElem) => {
+// const result = numbers.filter((curElem) => {
 //   return curElem > 4;
 // });
 
@@ -300,12 +315,12 @@
 // const result = products.filter((value) => value.price <= 500);
 // console.log(result);
 
-// //! Filter unique values
+//! Filter unique values
 // const numberss = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
 // let uniqueValues = numberss.filter((curElem, index, arr) => {
 //   //   console.log(index);
-//   //   console.log(arr.indexOf(curElem));
-//   return arr.indexOf(curElem) === index;
+//     console.log(arr.indexOf(curElem));
+// //   return arr.indexOf(curElem) === index;
 // });
 // console.log(uniqueValues);
 // it will give new value.
@@ -318,14 +333,16 @@
 //? Sorting an Array: The sort method sorts the elements of an array in place and returns 
 // the sorted array. By default, it sorts elements as strings.
 
-// const fruits = ["Banana", "Apple", "Orange", "Mango"];
-// console.log(fruits.sort());
-const numberss = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
+// const fruit = ["Banana", "Apple", "Orange", "Mango"];
+// console.log(fruit.sort());
+// const numberss = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
 // console.log(numberss.sort());
 
 //? compare callback function
 // syntax
+// Ascending: 1, 2, 5, 10
 // const sortedNumbers = numberss.sort((a, b) => a - b);
+// Descending: 10, 5, 2, 1
 // const sortedNumbers = numberss.sort((a, b) => b - a);
 // console.log(numberss);
 
@@ -337,27 +354,6 @@ const numberss = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
 //   if (b > a) return 1;
 // });
 
-// console.log(numberss);
-
-//? For ascending order
-// const sortedNumbers = numberss.sort((a, b) => {
-//   if (a > b) {
-//     return 1;
-//   } else if (b > a) {
-//     return -1;
-//   }
-// });
-// console.log(numberss);
-
-
-//? For descending order
-// const sortedNumbers = numberss.sort((a, b) => {
-//   if (a > b) {
-//     return -1;
-//   } else if (b > a) {
-//     return 1;
-//   }
-// });
 // console.log(numberss);
 
 //* =========================================
@@ -378,7 +374,7 @@ const numberss = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
 // let result = numbers.map((curElem) => curElem * curElem);
 // console.log(result);
 
-//! 1: Using the map method, write a function that takes an array of strings and returns a 
+//! 1: Using the map method, write a function that takes an array of strings and returns a
 // new array where each string is capitalized.
 // Original array of strings
 // const words = ["APPLE", "banana", "cherry", "date"];
@@ -387,13 +383,12 @@ const numberss = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
 // });
 // console.log(newWords);
 
-
-//! 2: Using the map method, write a function that takes an array of numbers and 
+//! 2: Using the map method, write a function that takes an array of numbers and
 // returns a new array where each number is squared, but only if it's an even number.
 
 // Original array of numbers
 // const numbers = [1, 2, 3, 4, 5];
-// const result = numberss
+// const result = numbers
 //   .map((curElem) => {
 //     if (curElem % 2 === 0) {
 //       return curElem * curElem;
@@ -401,14 +396,13 @@ const numberss = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
 //   })
 //   .filter((curElem) => curElem !== undefined);
 // console.log(result);
-
+// OR
 // const evenSquare = numbers
 //   .map((curNum) => (curNum % 2 === 0 ? curNum * curNum : undefined))
 //   .filter((curElem) => curElem !== undefined);
-
 // console.log(evenSquare);
 
-//! 3: Using the map method, write a function that takes an array of names and returns a new 
+//! 3: Using the map method, write a function that takes an array of names and returns a new
 // array where each name is prefixed with "Mr. ".
 
 // const names = ["ram", "vinod", "laxman"];
@@ -418,7 +412,7 @@ const numberss = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
 //? Reduce method
 // The reduce method in JavaScript is used to accumulate or reduce an array to a single value.
 //  It iterates over the elements of an array and applies a callback function to each element,
-//  updating an accumulator value with the result. The reduce method takes a callback function as 
+//  updating an accumulator value with the result. The reduce method takes a callback function as
 // its first argument and an optional initial value for the accumulator as the second argument.
 // syntax
 // array.reduce(function callback(accumulator, currentValue, index, array) {
@@ -431,14 +425,18 @@ const numberss = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
 // currentValue: The current element being processed in the array.
 // index (optional): The index of the current element being processed.
 // array (optional): The array reduce was called upon.
-// initialValue (optional): An initial value for the accumulator. If not provided, 
+// initialValue (optional): An initial value for the accumulator. If not provided,
 // the first element of the array is used as the initial accumulator value.
 
 // const productPrice = [100, 200, 300, 400, 500];
-
 // const totalPrice = productPrice.reduce((accum, curElem) => {
-//   return accum + curElem;
+//     return accum + curElem;
 // }, 0);
-
 // console.log(totalPrice);
 
+// if we dont give initial value 0 consider the array first value
+// acc = 100
+// curElem = 100 + 200 → 300
+// curElem = 300 + 300 → 600
+// curElem = 600 + 400 → 1000
+// curElem = 1000 + 500 → 1500
