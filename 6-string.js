@@ -102,21 +102,16 @@
 //  Returns an empty iterator if no match is found.
 // let texts = "Hello JavaScript, welcome to our world best JavaScript course";
 // let matchResult = texts.matchAll("javascript");
-// let matchResult = texts.matchAll("JavaScript");
+// let matchResult = texts.matchAll('JavaScript');
 //todo  here the js converts the normal text into regular expression text.match(/JavaScript/g);
-//also adds the g flag at the end
 // console.log(matchResult);
 // console.log(...matchResult);
 
 // for (let item of matchResult) {
-//   console.log(item);
+//   console.log(item ,item.index);
 //   console.log(item[0]);
 // }
-
-// for (let index of matchResult) {
-//   console.log(index.index);
-// }
-
+// Destructuring
 // for (let {index} of matchResult) {
 //   console.log(index);
 // }
@@ -131,7 +126,7 @@
 
 // startsWith(): The startsWith() method returns true if a string begins with a specified value.
 // Otherwise it returns false:
-// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+let texts = "Hello JavaScript, welcome to our world best JavaScript course";
 // let result = texts.startsWith("Helcome");
 // let result = texts.startsWith("Hello");
 // start position for the search can be specified
@@ -142,9 +137,10 @@
 // endsWith(): The endsWith() method returns true if a string ends with a specified value. 
 // Otherwise it returns false:
 
-// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = texts.endsWith("welcome");
-// let result = texts.endsWith("course");
+// let text = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = text.endsWith("welcome");
+// let result = text.endsWith("course");
+// console.log(result);
 
 
 // =========================================
@@ -156,14 +152,13 @@
 // syntax
 // slice(start, end);
 
-// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = texts.slice(6);
-// let result = texts.slice(6, 16);
+// let text = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = text.slice(6);
+// let result = text.slice(6, 16);
 // console.log(result);
 
 // subString() substring()
 // a: substring: Extracts a portion of the string based on starting and ending indices.
-// camelCase is used to separate words, substring is not to be intended as Sub String but as Substring
 // syntax
 // substring(indexStart) // index starts with 0
 // substring(indexStart, indexEnd)
@@ -171,25 +166,24 @@
 // substring() is similar to slice(). The difference is that start and end values less than 0 
 // are treated as 0 in substring().
 
-// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
+// let text = "Hello JavaScript, welcome to our world best JavaScript course";
 // let result = texts.slice(-6);
 
 // start = 6 aur end = 0
 // substring() inko swap kar deta hai:
-// let result = texts.substring(6,-6);
+// let result = text.substring(6,-6);
 // console.log(result);
 
 // Homework
-// let texts = "Hello JavaScript, welcome to our world best JavaScript course";
-// let result = texts.substring(0);
-// let result = texts.substring(1);
-// let result = texts.substring(-5);
+// let text = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = text.substring(0);
+// let result = text.substring(0,5);
+// let result = text.substring(1);
+// let result = text.substring(-5);
 // console.log(result);
+// In `slice()` and `substring()`, the `end` index tells where to stop, 
+// but the character at that index is not included.
 
-// similarities
-// todo  In both the slice() and substring() methods, the end parameter indicates the ending 
-// index up to which the extraction occurs, but the character at the end index is excluded 
-// from the extracted substring.
 
 // Interview Question
 // What is the output for the following code?
