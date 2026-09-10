@@ -1,11 +1,9 @@
 // Math Object in JavaScript
-
-// Math: The Math namespace object contains static properties and methods
-// for mathematical constants and functions.
+// Math is a built-in JavaScript object that provides ready-made mathematical values and functions.
 // Math works with the Number type. It doesn't work with BigInt.
 
 // 1: Constants:
-//  Math.PI: Represents the mathematical constant Pi (π).
+// Math.PI: Represents the mathematical constant Pi (π).
 // const piValue = Math.PI;
 // console.log(piValue);
 
@@ -13,9 +11,7 @@
 // 2. Basic Operations:
 // =========================================
 
-// Math.abs(): The Math.abs() static method returns the absolute value of a number.
-// or in simple, how far the number is from 0. It will be always positive
-
+// Math.abs() tells you how far a number is from 0, so the result is never negative.
 // console.log(Math.abs(5));
 // console.log(Math.abs(-3));
 // console.log(Math.abs(-115));
@@ -36,23 +32,22 @@
 // const floorValue = Math.floor(-3.7);
 // console.log(floorValue);
 
-// Math.trunc(x): Returns the integer part of x:
-// Math.floor() and Math.trunc() always give same value. but in negative give different value
+// Math.trunc(): 
+// Math.trunc() just removes the decimal part and keeps the integer part.
 // const truncValue = Math.trunc(3.7);
 // const truncValue = Math.trunc(-3.7);
 // console.log(truncValue);
 
-//todo Math.trunc() and Math.sign() were added to JavaScript 2015 - ES6.
 // const truncValue = Math.trunc(-3.7);
 // const floorValue = Math.floor(-3.1);
 // console.log(truncValue);
 // console.log(floorValue);
 
-//todo Notes:
-// No matter how many chars are there after decimal, they all will always return only number before the decimal.
-// round rounds to the nearest integer.
-// floor always rounds down.
-// ceil always rounds up.
+//todo Math.trunc() and Math.sign() were added to JavaScript 2015 - ES6.
+// Math.sign() tells whether a number is positive, negative, or zero.
+// console.log(Math.sign(5));
+// console.log(Math.sign(-5));
+// console.log(Math.sign(0));
 
 // =========================================
 // 3. Exponential and Logarithmic Functions:
@@ -75,6 +70,7 @@
 // Math.log2(x) returns the base 2 logarithm of x.
 // let logResult = Math.log2(1);
 // let logResult = Math.log2(2);
+// let logResult = Math.log2(8);
 // console.log(logResult);
 
 // Math.log() → natural log (base e) e⁰ = 1
@@ -87,5 +83,3 @@
 // Generate Random number
 // Math.random(): Math.random() returns a random number between 0 (inclusive), and 1 (exclusive)
 // console.log(Math.floor(Math.random() * 100));
-// console.log((Math.random() * 100).toFixed(3));
-// console.log((Math.random() * 100).toFixed(3));
