@@ -25,6 +25,7 @@
 // let text = 'My name is " Rida " & \\ I am a \'Full Stack Developer.\' ';
 // let text = "My name is ' Rida ' & \\ I am a \"Full Stack \" Developer. ";
 // let text = 'hello \nworld';
+// let text = 'hello\tworld';
 // console.log(text);
 
 // =========================================
@@ -48,7 +49,8 @@
 // let strMap = strArr.map((curElem, index) => `${curElem} - ${index}`);
 // console.log(strMap);
 
-//? b: lastIndexOf() : The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+//? b: lastIndexOf() : The lastIndexOf() method returns the index of the last occurrence 
+// of a specified text in a string:
 // syntax
 // lastIndexOf(searchString)
 // lastIndexOf(searchString, position)
@@ -66,8 +68,21 @@
 // let texts = "Hello JavaScript, welcome to our world best JavaScript course";
 // let result = texts.search('javascript');
 // let result = texts.search('JavaScript');
-// let result = texts.search(/Javascript/i);
+
+// /javascript/i Also a Regular Expression.
+// i is a flag.
+// i = case-insensitive.
+// javascript, JavaScript, and JAVASCRIPT all match.
+// i = ignore case
+// let result = texts.search(/javascript/i);
+
+// /javascript/ A Regular Expression (RegEx).
+// Case-sensitive. javascript ≠ JavaScript.
+// No flag is used.
+// let result = texts.search(/javascript/);
+
 // console.log(result);
+
 //*👉 Important Tips
 // The search() method cannot take a second start position argument.
 // The indexOf() method cannot take powerful search values (regular expressions).
