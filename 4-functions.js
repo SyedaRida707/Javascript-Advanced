@@ -1,11 +1,9 @@
 
-//* ===============================
 //* Function in JavaScript
-//* ==============================
 //? In JavaScript, a function is a block of reusable code that performs a 
-// specific task or set of tasks. Functions are used to organize code into 
-// modular and manageable pieces, promote code reuse, and make programs more readable.
+// specific task or set of tasks.
 
+// example
 //  3 students at a same time wants to find the sum of two numbers
 // 1st student
 // var a = 5,
@@ -216,35 +214,32 @@
 // console.log(calculator(10, 2, '/')); // Output: 5
 
 // const calculator = (num1, num2, operator) => {
-//   let result;
-//   switch (operator) {
-//     case "+":
-//       return num1 + num2;
+//     switch (operator) {
+//         case "+":
+//             return num1 + num2;
 
-//     case "-":
-//       result = num1 - num2;
-//       return result;
+//         case "-":
+//             return num1 - num2;
 
-//     case "*":
-//       result = num1 * num2;
-//       return result;
+//         case "*":
+//             return num1 * num2;
 
-//     case "/":
-//       if (num2 === 0) {
-//         return "0 is not allowed";
-//       } else {
-//         result = num1 / num2;
-//         return result;
-//       }
+//         case "/":
+//             if (num2 === 0) {
+//                 return "0 is not allowed";
+//             } else {
+//                 return num1 / num2;
+//             }
 
-//     default:
-//       return "no operator found";
-//   }
+//         default:
+//             return "no operator found";
+//     }
 // };
 
 // console.log(calculator(5, 2, "+")); // Output: 7
 // console.log(calculator(8, 4, "-")); // Output: 4
-// console.log(calculator(10, 0, "/")); // Output: 5
+// console.log(calculator(10, 2, "*")); // Output: 20
+// console.log(calculator(10, 2, "/")); // Output: 5
 
 //! Reverse a String:
 //! Write a function to reverse a given string without using built-in reverse methods.
@@ -252,7 +247,7 @@
 //     let reverse = '';
 //     for (let i = str.length - 1; i >= 0; i--) {
 //         reverse += str[i];
-//         console.log( str[i]);
+//         console.log( str[i], reverse);
 //     }
 //     return reverse;
 // };
@@ -260,7 +255,9 @@
 
 
 //! Palindrome Check:
-//! Create a function to determine if a given string is a palindrome (reads the same backward as forward).
+//! Create a function to determine if a given string is a palindrome 
+// (reads the same backward as forward).
+
 // const isPalindrome = (str) => {
 //     let reverse = '';
 //     for (let i = str.length - 1; i >= 0; i--) {
@@ -271,7 +268,6 @@
 // }
 // console.log(isPalindrome('word'));
 // console.log(isPalindrome('level'));
-
 
 // // isi     isi
 // radar
