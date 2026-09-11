@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        div {
+            width: 20rem;
+            aspect-ratio: 1;
+            background-color: black;
+        }
+
+        .change {
+            transition: all .5s linear;
+            border-radius: 50%;
+        }
+
+        .change1 {
+            transition: all .5s linear;
+            border-radius: 50%;
+            translate: -50% 0;
+            background-color: blueviolet;
+        }
+
+        .change2 {
+            transition: all .5s linear;
+            border-radius: 50%;
+            translate: 50% 0;
+            background-color: blueviolet;
+        }
+
+        .change3 {
+            transition: all .5s linear;
+            border-radius: 50%;
+            translate: -50% 0;
+            background-color: rgb(217, 226, 43);
+        }
+
+        .change4 {
+            transition: all .5s linear;
+            border-radius: 0%;
+            background-color: rgb(226, 43, 180);
+            translate: 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Three ways to attach event -->
+    <!--Inline event  -->
+    <h1>Inline event</h1>
+    <button onclick="alert('hi')">onclick</button>
+    <button ondblclick="alert('hi')">ondblclick</button>
+    <button onmouseover="alert('hi')">onmouseover</button>
+    <!-- DOM event handler-->
+    <h1>DOM event handler</h1>
+    <button id="btn1">onclick</button>
+    <button id="btn2">ondblclick</button>
+    <button id="btn3">onmouseover</button>
+    <!-- addEventListener event handler-->
+    <h1>addEventListener event handler</h1>
+    <button id="btne1">onclick</button>
+    <button id="btne2">ondblclick</button>
+    <button id="btne3">onmouseover</button>
+
+    <!-- Practice -->
+    <center>
+        <h1>practice</h1>
+        <div></div>
+        <button id="change">Click</button>
+    </center>
+    <script>
+        // DOM event handler
+        document.getElementById('btn1').onclick = () => { alert('hi') };
+        document.getElementById('btn2').ondblclick = () => { alert('hi') };
+        document.getElementById('btn3').onmouseover = () => { alert('hi') };
+        // addEventListener event handler
+        document.getElementById('btne1').addEventListener('click', () => alert('hi'));
+        document.getElementById('btne2').addEventListener('dblclick', () => alert('hi'));
+        document.getElementById('btne3').addEventListener('mouseover', () => alert('hi'));
+        // Practice
+        let btn = document.getElementById('change');
+        let div = document.querySelector('div');
+
+        btn.addEventListener('click', () => {
+            div.style.backgroundColor = 'green'
+        });
+        btn.addEventListener('dblclick', () => {
+            div.classList.add('change');
+        });
+        div.addEventListener('mouseover', () => {
+            div.classList.add('change1');
+        });
+        div.addEventListener('mouseout', () => {
+            div.classList.add('change2');
+        });
+        div.addEventListener('mousedown', () => {
+            div.classList.add('change3');
+        });
+        div.addEventListener('mouseup', () => {
+            div.classList.add('change4');
+        });
+    </script>
+</body>
+
+</html>

@@ -186,7 +186,8 @@
 
 //? removeChild(node): Remove a child node from its parent.
 
-//? addEventListener(event, function): Create an event listener to handle events.
+//? addEventListener(event, function): Create an 
+// event listener to handle events.
 
 //? removeEventListener(event, function): Remove an event listener.
 
