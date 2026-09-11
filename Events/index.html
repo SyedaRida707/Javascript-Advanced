@@ -44,6 +44,18 @@
             background-color: rgb(226, 43, 180);
             translate: 0 0;
         }
+
+        /* practice 2 */
+        main{
+            width: 50%;
+            background-color: rgb(215, 248, 250);
+            padding: 10px;
+            & p{
+                text-align: left;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
     </style>
 </head>
 
@@ -65,11 +77,36 @@
     <button id="btne2">ondblclick</button>
     <button id="btne3">onmouseover</button>
 
-    <!-- Practice -->
+    <!-- Practice 1-->
     <center>
-        <h1>practice</h1>
+        <h1>practice 1</h1>
         <div></div>
         <button id="change">Click</button>
+    </center>
+
+    <!-- practice 2 -->
+    <center>
+        <h1>practice 2</h1>
+        <input type="text" placeholder="enter someting">
+        <main>
+            <p id="keypress">Key Press </p>
+            <p id="keycode">Key Code </p>
+            <p id="keycodeat">Key CodeAt </p>
+            <p id="eventtype">Event Type </p>
+        </main>
+    </center>
+
+
+    <!-- Practice 3 -->
+    <center>
+        <h1>practice 3</h1>
+        <input id="field" type="text" placeholder="enter someting" name="user">
+        <main>
+            <p id="one">Input Value: </p>
+            <p id="two">Input Name: </p>
+            <p id="three">Input Type: </p>
+            <p id="four">Event Type: </p>
+        </main>
     </center>
     <script>
         // DOM event handler
@@ -101,6 +138,36 @@
         });
         div.addEventListener('mouseup', () => {
             div.classList.add('change4');
+        });
+
+        <!-- practice 2 -->
+        let input = document.querySelector('input');
+        let p1 = document.getElementById('keypress');
+        let p2 = document.getElementById('keycode');
+        let p3 = document.getElementById('keycodeat');
+        let p4 = document.getElementById('eventtype');
+                            // keyup
+        input.addEventListener('keydown', (event) => {
+            console.log(event);
+
+            p1.innerText = `Key Press: ${event.key}`;
+            p2.innerText = `Key code:  ${event.code}`;
+            p3.innerText = `Key Char code:  ${event.key.charCodeAt(0)}`
+            p4.innerText = `Event type:  ${event.type}`;
+        });
+
+        <!-- practice 3 -->
+        let field = document.querySelector('#field');
+        let para1 = document.getElementById('one');
+        let para2 = document.getElementById('two');
+        let para3 = document.getElementById('three');
+        let para4 = document.getElementById('four');
+                            // keyup
+        field.addEventListener('input', (event) => {
+            para1.innerText = `Input Value:  ${event.target.value}`;
+            para2.innerText = `Input Name: ${event.target.name}`;
+            para3.innerText = `Input Type:  ${event.inputType}`
+            para4.innerText = `Event Type:  ${event.type}`;
         });
     </script>
 </body>
