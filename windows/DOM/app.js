@@ -203,7 +203,8 @@
 //* =============================
 
 //? Iteration:
-//? forEach (Array.from): Iterate through NodeList or convert to an array for more flexible manipulation.
+//? forEach (Array.from): Iterate through NodeList or convert to an array for more flexible 
+// manipulation.
 
 // Very important
 // When you use the browser's developer tools console to select an element and change

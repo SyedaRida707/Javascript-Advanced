@@ -1,6 +1,4 @@
-//* =========================================
 //* BOM Properties:
-//* =========================================
 
 // ?window properties
 
@@ -51,7 +49,8 @@
 // Represents the DOM of the currently displayed document.
 
 //* navigator Object:
-//? The JavaScript navigator object is used for browser detection. It can be used to get browser information such as appName, appCodeName, userAgent etc.
+//? The JavaScript navigator object is used for browser detection. It can be used to get 
+// browser information such as appName, appCodeName, userAgent etc.
 
 //? navigator.userAgent (Property):
 // Returns the user agent string of the browser.
@@ -75,7 +74,8 @@
 
 //* 2: History object
 
-// The JavaScript history object represents an array of URLs visited by the user. By using this object, you can load previous, forward or any particular page.
+// The JavaScript history object represents an array of URLs visited by the user. By 
+// using this object, you can load previous, forward or any particular page.
 
 //* 3: location Object:
 
