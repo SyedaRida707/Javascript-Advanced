@@ -162,8 +162,15 @@
         let para2 = document.getElementById('two');
         let para3 = document.getElementById('three');
         let para4 = document.getElementById('four');
-                            // keyup
-        field.addEventListener('input', (event) => {
+                           
+        // field.addEventListener('input', (event) => {
+        //     para1.innerText = `Input Value:  ${event.target.value}`;
+        //     para2.innerText = `Input Name: ${event.target.name}`;
+        //     para3.innerText = `Input Type:  ${event.inputType}`
+        //     para4.innerText = `Event Type:  ${event.type}`;
+        // });
+
+        field.addEventListener('change', (event) => {
             para1.innerText = `Input Value:  ${event.target.value}`;
             para2.innerText = `Input Name: ${event.target.name}`;
             para3.innerText = `Input Type:  ${event.inputType}`

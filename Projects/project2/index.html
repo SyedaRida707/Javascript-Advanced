@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Gradiant Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div>
+            <button id="btn1">#123htr</button>
+            <button id="btn2">#123hty</button>
+        </div>
+        <h2>Copy code</h2>
+        <p>background-image: linear-gradient(to right, rgb(0, 221, 255), rgb(255, 192, 203));</p>
+    </section>
+
+    <script>
+        let btn1 = document.querySelector('#btn1');
+        let btn2 = document.querySelector('#btn2');
+        let p = document.querySelector('p');
+        let color1 = '#000';
+        let color2 = '#fff';
+
+        btn1.addEventListener('click', () => {
+            let rgb1 = '0123456789ABCDEF';
+            color1 = '#';
+            for (let i = 0; i < 6; i++) {
+                // console.log(rgb1[Math.floor(Math.random() * 16)]);
+                color1 += rgb1[Math.floor(Math.random() * 16)];
+            }
+            p.innerText = `background-image: linear-gradient(to right,${color1}, ${color2});`
+            document.body.style.backgroundImage = `linear-gradient(to right,${color1},  ${color2})`
+            btn1.innerText = color1
+            console.log(color1);
+
+        });
+
+        btn2.addEventListener('click', () => {
+            let rgb1 = '0123456789ABCDEF';
+            color2 = '#';
+            for (let i = 0; i < 6; i++) {
+                // console.log(rgb1[Math.floor(Math.random() * 16)]);
+                color2 += rgb1[Math.floor(Math.random() * 16)];
+            }
+            p.innerText = `background-image: linear-gradient(to right,${color1},  ${color2});`
+            document.body.style.backgroundImage = `linear-gradient(to right,${color1},  ${color2})`
+            btn2.innerText = color2
+            console.log(color2);
+        });
+
+    </script>
+</body>
+
+</html>
