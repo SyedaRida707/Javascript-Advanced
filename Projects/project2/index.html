@@ -22,39 +22,39 @@
         let btn1 = document.querySelector('#btn1');
         let btn2 = document.querySelector('#btn2');
         let p = document.querySelector('p');
-        let color1 = '#00ddff';
-        let color2 = '#cd88f5';
+        let rgb1 = '#00ddff';
+        let rgb2 = '#cd88f5';
 
-        btn1.addEventListener('click', () => {
-            let rgb1 = '0123456789ABCDEF';
-            color1 = '#';
+        let makeColor = () => {
+            let rgb = '0123456789ABCDEF';
+            let color = '#'
             for (let i = 0; i < 6; i++) {
                 // console.log(rgb1[Math.floor(Math.random() * 16)]);
-                color1 += rgb1[Math.floor(Math.random() * 16)];
+                color += rgb[Math.floor(Math.random() * 16)];
             }
-            p.innerText = `background-image: linear-gradient(to right,${color1}, ${color2});`
-            document.body.style.backgroundImage = `linear-gradient(to right,${color1},  ${color2})`
-            btn1.innerText = color1
-            console.log(color1);
+            return color;
+        }
+        btn1.addEventListener('click', () => {
+            rgb1 = makeColor();
+            p.innerText = `background-image: linear-gradient(to right,${rgb1}, ${rgb2});`
+            document.body.style.backgroundImage = `linear-gradient(to right,${rgb1},  ${rgb2})`
+            btn1.innerText = rgb1
+            console.log(rgb1);
 
         });
 
         btn2.addEventListener('click', () => {
-            let rgb1 = '0123456789ABCDEF';
-            color2 = '#';
-            for (let i = 0; i < 6; i++) {
-                // console.log(rgb1[Math.floor(Math.random() * 16)]);
-                color2 += rgb1[Math.floor(Math.random() * 16)];
-            }
-            p.innerText = `background-image: linear-gradient(to right,${color1},  ${color2});`
-            document.body.style.backgroundImage = `linear-gradient(to right,${color1},  ${color2})`
-            btn2.innerText = color2
-            console.log(color2);
+            rgb2 = makeColor();
+            p.innerText = `background-image: linear-gradient(to right,${rgb1}, ${rgb2});`
+            document.body.style.backgroundImage = `linear-gradient(to right,${rgb1},  ${rgb2})`
+            btn1.innerText = rgb2;
+            console.log(rgb2);
         });
 
         p.addEventListener('click', () => {
             navigator.clipboard.writeText(p.innerText)
             alert('Copy your code ' + '\n' + p.innerText)
+            p.previousElementSibling.innerText = 'Copied'
         });
 
     </script>
