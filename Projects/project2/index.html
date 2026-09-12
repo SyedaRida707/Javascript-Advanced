@@ -11,8 +11,8 @@
 <body>
     <section>
         <div>
-            <button id="btn1">#123htr</button>
-            <button id="btn2">#123hty</button>
+            <button id="btn1">#00ddff</button>
+            <button id="btn2">#cd88f5</button>
         </div>
         <h2>Copy code</h2>
         <p>background-image: linear-gradient(to right, rgb(0, 221, 255), rgb(255, 192, 203));</p>
@@ -22,8 +22,8 @@
         let btn1 = document.querySelector('#btn1');
         let btn2 = document.querySelector('#btn2');
         let p = document.querySelector('p');
-        let color1 = '#000';
-        let color2 = '#fff';
+        let color1 = '#00ddff';
+        let color2 = '#cd88f5';
 
         btn1.addEventListener('click', () => {
             let rgb1 = '0123456789ABCDEF';
@@ -50,6 +50,11 @@
             document.body.style.backgroundImage = `linear-gradient(to right,${color1},  ${color2})`
             btn2.innerText = color2
             console.log(color2);
+        });
+
+        p.addEventListener('click', () => {
+            navigator.clipboard.writeText(p.innerText)
+            alert('Copy your code ' + '\n' + p.innerText)
         });
 
     </script>

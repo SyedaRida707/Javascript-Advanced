@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: linear-gradient(to right, rgb(0, 221, 255), rgb(255, 192, 203)); */
+    background-image: linear-gradient(to right, #00ddff, #cd88f5);
 }
 
 section {
