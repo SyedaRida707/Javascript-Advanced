@@ -34,12 +34,12 @@
 // todo Local Storage can only store strings, so when you want to store a complex data structure 
 // like an array or an object, you need to convert it to a string using JSON.stringify:
 
-const data = { name: "rida", age: 21, city: "karachi" };
+// const data = { name: "rida", age: 21, city: "karachi" };
 // const jsonString = JSON.stringify(data)
 // console.log(jsonString);
 // Output: '{"name":"Vinod","age":30,"city":"pune"}'
 
-const jsonString = localStorage.setItem('userinfo', JSON.stringify(data));
+// const jsonString = localStorage.setItem('userinfo', JSON.stringify(data));
 // console.log(JSON.parse(localStorage.getItem('userinfo')));
 
 // JSON.parse: Converts a JSON string into a JavaScript object.
@@ -51,5 +51,31 @@ const jsonString = localStorage.setItem('userinfo', JSON.stringify(data));
 // console.log(parsedData);
 // Output: { name: 'Vinod', age: 30, city: 'pune' }
 
-const getobject = JSON.parse(localStorage.getItem('userinfo'));
-console.log(getobject);
+// const getobject = JSON.parse(localStorage.getItem('userinfo'));
+// console.log(getobject);
+
+// Example
+const students = {
+    name: 'rida',
+    age: 21,
+    courses: {
+        course1: 'backend',
+        course2: 'frontend'
+    },
+    city: 'karachi'
+}
+const btn1 = document.querySelector('#btn1');
+const btn2 = document.querySelector('#btn2');
+const btn3 = document.querySelector('#btn3');
+
+btn1.addEventListener('click', () => {
+    localStorage.setItem('UserObject', JSON.stringify(students));
+});
+btn2.addEventListener('click', () => {
+   let get = JSON.parse(localStorage.getItem('UserObject'));
+   console.log('get data ',get);  
+});
+btn3.addEventListener('click', () => {
+  let remove =  localStorage.removeItem('UserObject');
+  console.log('remove data', remove); 
+});
