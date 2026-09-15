@@ -15,7 +15,7 @@ body {
 
 form {
     margin-top: 20px;
-    width: 50%;
+    width: 70%;
 
     & h2 {
         text-align: center;
@@ -37,8 +37,13 @@ form {
     }
 
 }
-#interact {
-    width: 40%;
+#interact{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.main2 {
+    width: 55%;
     margin-top: 10px;
     color: white;
     display: flex;
