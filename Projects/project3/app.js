@@ -1,34 +1,74 @@
 let addBtn = document.querySelector('#addbtn');
 let input = document.querySelector('#inputfield');
 let divShow = document.querySelector('#interact');
-let addValueArray = [];
 
 
-const getTodoListFromLocal = () =>{
-  return  JSON.parse(localStorage.getItem('todo'));
+const getTodoListFromLocal = () => {
+    return JSON.parse(localStorage.getItem('todo'));
 }
+const addagain = (addValueArray) =>{
+ localStorage.setItem('todo',JSON.stringify(addValueArray));
+}
+
+const showDynamic = (e) => {
+    const div = document.createElement('div');
+    div.classList.add('main2');
+    div.innerHTML = `<p>${e}</p>
+            <button id='deletebtn'>Delete</button>`;
+    divShow.append(div);
+}
+
+let addValueArray = getTodoListFromLocal() || [];
 
 const addTodoList = (event) => {
     event.preventDefault();
 
-    addValueArray = getTodoListFromLocal() || [];
     const todoValue = input.value.trim();
-
-    addValueArray.push(todoValue);
+    input.value = '';
+    
+    if(todoValue != '' && !addValueArray.includes(todoValue)){
+        addValueArray.push(todoValue);
     addValueArray = [...new Set(addValueArray)];
     console.log(addValueArray);
-    localStorage.setItem('todo',JSON.stringify(addValueArray));
+    localStorage.setItem('todo', JSON.stringify(addValueArray));
 
+    showDynamic(todoValue);
+    }
+}
 
-    const div = document.createElement('div');
-    div.classList.add('main2');
-    div.innerHTML = `<p>${input.value}</p>
-            <button id='deletebtn'>Delete</button>`;
-    divShow.append(div);
+const showData = () => {
+    console.log(addValueArray);
+    addValueArray.forEach((element) => {
+        showDynamic(element);
+    });
 
+}
+
+showData();
+
+// remove
+const deletetodo = (e) =>{
+    console.log(e.target);
+    let getodo = e.target;
+    let removetodo = getodo.previousElementSibling.innerText;
+    console.log(removetodo);
+    
+    addValueArray = addValueArray.filter((e)=>{
+     console.log(e);
+     return e != removetodo.toLowerCase();
+    });
+
+    addagain(addValueArray);
+
+    console.log(addValueArray);
+    
 }
 
 addBtn.addEventListener('click', (e) => {
     addTodoList(e);
 });
 
+
+divShow.addEventListener('click',(e)=>{
+    deletetodo(e);
+});
