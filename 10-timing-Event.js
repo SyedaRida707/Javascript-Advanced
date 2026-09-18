@@ -73,6 +73,7 @@
 // const repeatedFunction = () => {
 //   console.log("This function repeats every 1000 milliseconds (1 second)");
 // };
+// repeatedFunction();
 // const intervalID = setInterval(repeatedFunction, 1000);
 
 // setTimeout(() => {
