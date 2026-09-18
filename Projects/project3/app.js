@@ -14,7 +14,7 @@ const showDynamic = (e) => {
     const div = document.createElement('div');
     div.classList.add('main2');
     div.innerHTML = `<p>${e}</p>
-            <button id='deletebtn'>Delete</button>`;
+            <button class='deletebtn'>Delete</button>`;
     divShow.append(div);
 }
 
