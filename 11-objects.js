@@ -89,12 +89,12 @@
 //* =================================
 //* Data Modeling:
 //* =================================
-//? Data modeling is the process of creating a visual representation of either a whole information system 
-// or parts of it to communicate connections between data points and structures. The goal is to illustrate 
-// the types of data used and stored within the system, the relationships among these data types, the ways 
+//? Data modeling is the process of creating a visual representation of either a whole information system
+// or parts of it to communicate connections between data points and structures. The goal is to illustrate
+// the types of data used and stored within the system, the relationships among these data types, the ways
 // the data can be grouped and organized and its formats and attributes.
 
-// Objects are excellent for modeling real-world entities. For instance, you might represent a car, a user, 
+// Objects are excellent for modeling real-world entities. For instance, you might represent a car, a user,
 // or a product as an object with properties like color, brand, username, etc.
 
 // let car = {
@@ -110,12 +110,12 @@
 //*  Interview Question
 //* ======================================
 
-// Explain the difference between passing objects by reference and by value in JavaScript. Provide an 
+// Explain the difference between passing objects by reference and by value in JavaScript. Provide an
 // example to demonstrate each scenario.
 
-//? sol: In JavaScript, primitive data types like numbers and strings are passed by value, while objects function 
+//? sol: In JavaScript, primitive data types like numbers and strings are passed by value, while objects function
 // array are passed by reference.
-//? Passing by value: When passing by value, a copy of the primitive value is created and passed to the 
+//? Passing by value: When passing by value, a copy of the primitive value is created and passed to the
 // function or assigned to a variable. Any changes made to the copy do not affect the original value.
 
 // let a = 10;
@@ -136,8 +136,8 @@
 // b gets a copy of a's value. Changing b does not change a.
 // Passing by value means a copy of the value is passed.
 
-//? Passing by reference: When passing by reference, a reference to the memory location of the object 
-// is passed to the function or assigned to a variable. Any changes made to the object through this 
+//? Passing by reference: When passing by reference, a reference to the memory location of the object
+// is passed to the function or assigned to a variable. Any changes made to the object through this
 // reference will affect the original object.
 
 // let obj = { id: 5, name: "kodyfier" };
@@ -166,7 +166,7 @@
 // person1 and person2 refer to the same object. Changing the object through person2 also changes person1.
 // Passing by reference means both variables refer to the same object.
 
-// To avoid this behavior and create a true copy of the object, you can use methods like Object.assign() 
+// To avoid this behavior and create a true copy of the object, you can use methods like Object.assign()
 // or the spread operator (...):
 
 //? Object.assign() is used to copy properties from one or more source objects to a target object.
@@ -203,7 +203,7 @@
 //* JSON (JavaScript Object Notation):
 //* ======================================
 
-//JSON is a data interchange format derived from JavaScript objects. Objects can be easily converted to 
+//JSON is a data interchange format derived from JavaScript objects. Objects can be easily converted to
 // JSON and vice versa.
 
 // let student = {
@@ -265,7 +265,7 @@
 // };
 // obj.greet();
 
-//* In this example, the greet method is defined using the "Method Shorthand" syntax. It's a more concise 
+//* In this example, the greet method is defined using the "Method Shorthand" syntax. It's a more concise
 // way to define methods in object literals.
 // const obj = {
 //   name: "Kodyfier",
@@ -287,17 +287,17 @@
 //* =====================================
 //* Objects Useful Methods
 //* ======================================
-const product = {
-    id: 1,
-    name: "Laptop",
-    category: "Computers",
-    brand: "ExampleBrand",
-    price: 999.99,
-    stock: 50,
-    description:
-        "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.",
-    image: "image link will be added during projects",
-};
+// const product = {
+//     id: 1,
+//     name: "Laptop",
+//     category: "Computers",
+//     brand: "ExampleBrand",
+//     price: 999.99,
+//     stock: 50,
+//     description:
+//         "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.",
+//     image: "image link will be added during projects",
+// };
 
 //? 1: Object.keys(): Returns an array containing the names of all enumerable own properties of an object.
 // let keys = Object.keys(product);
@@ -312,59 +312,63 @@ const product = {
 // let entries = Object.entries(product);
 // console.log(entries);
 
-//? 4: Object.hasOwnProperty(): Returns a boolean indicating whether the object has the specified property as 
+//? 4: Object.hasOwnProperty(): Returns a boolean indicating whether the object has the specified property as
 // an own property.
 // console.log(product.hasOwnProperty("name")); // Output: true
 // console.log(product.hasOwnProperty("isStudent")); // Output: false
 
-//? 5: Object.assign(): Copies the values of all enumerable own properties from one or more source objects to a 
+//? 5: Object.assign(): Copies the values of all enumerable own properties from one or more source objects to a
 // target object.
 // const target = { a: 1, b: 5 };
 // const source = { b: 3, c: 4 };
 // const mergedObject = Object.assign(target, source);
 // console.log(mergedObject); // Output: { a: 1, b: 3, c: 4 }
 
-//? 6: Object.freeze(): Freezes an object, preventing new properties from being added to it and existing properties from being modified or deleted.
+//? 6: Object.freeze(): Freezes an object, preventing new properties from being added to it and existing
+// properties from being modified or deleted.
 // Object.freeze(product);
+// // not change
 // product.id = "5656";
+// // not delete
+// delete product.id
+// // not add
+// product.age = 21;
 // console.log(product);
 
 //* =====================================
 //* Interview Question - Objects
 //* ======================================
-
 //! 1: What will be the output?
-
 // const target = { a: 1, b: 2 };
 // const source = { b: 3, c: 4 };
-
 // const mergedObject = Object.assign({}, target, source);
 // console.log(mergedObject);
 
 //* ===============================================
 //* Interview Question - Object Manipulation:
 //* ================================================
-//! Problem: Given an object representing a student, write a function to add a new subject with its corresponding grade to the student's record. Also check if the grades property is present or not?
+//! Problem: Given an object representing a student, write a function to add a new subject with its
+// corresponding grade to the student's record. Also check if the grades property is present or not?
 
 // let student = {
-//   name: "Bob",
-//   age: 20,
-//   grades: {
-//     math: 90,
-//     science: 85,
-//     history: 88,
-//   },
+//     name: "syeda",
+//     age: 20,
+//     grades: {
+//         math: 90,
+//         science: 85,
+//         history: 88,
+//     },
 // };
-
 // const addSubjectGrade = (student, subject, marks) => {
-//   if (!student.grades) {
-//     student.grades = {};
-//   }
+//     // console.log(student.grades);
+//     // console.log(student.grades.subject = marks);
 
-//   return (student.grades[subject] = marks);
-// };
-
-// addSubjectGrade(student, "computer", 92);
+//     if (!student.grades) {
+//         student.grades = {};
+//     }
+//     return student.grades[subject] = marks;
+// }
+// console.log(addSubjectGrade(student, 'computer', 99));
 // console.log(student);
 
 //* ===============================================
