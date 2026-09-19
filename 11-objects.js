@@ -124,6 +124,18 @@
 // console.log(modifyValue(a)); //pass by value
 // console.log(a);//original
 
+// Ex
+// let a = 10;
+// let b = a;
+
+// b = 20;
+
+// console.log(a); // 10
+// console.log(b); // 20
+
+// b gets a copy of a's value. Changing b does not change a.
+// Passing by value means a copy of the value is passed.
+
 //? Passing by reference: When passing by reference, a reference to the memory location of the object 
 // is passed to the function or assigned to a variable. Any changes made to the object through this 
 // reference will affect the original object.
@@ -131,46 +143,72 @@
 // let obj = { id: 5, name: "kodyfier" };
 // let obj1 = obj;
 
-// obj1.name = "thapa technical";
+// obj1.name = "syeda";
 // console.log(obj1);
 // console.log("original", obj);
+// interview
+// JavaScript needs to convert the object into a string.
+// The default string representation of an object is: [object Object]
+// console.log("original"+ obj);
 
-// To avoid this behavior and create a true copy of the object, you can use methods like Object.assign() or the spread operator (...):
+// Ex
+// let person1 = {
+//   name: "Rida"
+// };
+
+// let person2 = person1;
+
+// person2.name = "Ali";
+
+// console.log(person1.name); // Ali
+// console.log(person2.name); // Ali
+
+// person1 and person2 refer to the same object. Changing the object through person2 also changes person1.
+// Passing by reference means both variables refer to the same object.
+
+// To avoid this behavior and create a true copy of the object, you can use methods like Object.assign() 
+// or the spread operator (...):
 
 //? Object.assign() is used to copy properties from one or more source objects to a target object.
+// {} → new empty target object
+// obj → source object
+// Properties of obj are copied into {}
 
 // let obj = { id: 5, name: "kodyfier" };
-// let obj1 = {};
-// let newObj = Object.assign(obj1, obj);
+// // let newObj = Object.assign({}, obj);
+// // OR
+// // let obj1 = {};
+// // let newObj = Object.assign(obj1, obj);
 
-// newObj.name = "thapa technical";
-// console.log(newObj);
-// console.log("original", obj);
+// newObj.name = 'syeda';
+// console.log('copy', newObj);
+// console.log('original', obj);
 
 //* =====================================
 //* Comparison by Reference:
 //* ======================================
 
-//? Two objects are equal only if they refer to the same object.
-//? Independent objects (even if they look alike) are not equal:
+// Two objects are equal only when they refer to the same object in memory.
+// Two separate objects are not equal, even if they have exactly the same properties and values.
 
 // const obj1 = { name: "vinod" };
 // const obj2 = { name: "vinod" };
 // const obj3 = obj1;
 
-// // const isEqual = obj1 == obj2 ? true : false;
-// const isEqual = obj1 == obj3 ? true : false;
+// const isEqual = obj1 == obj2 ? true : false;
+// // const isEqual = obj1 == obj3 ? true : false;
 // console.log(isEqual);
 
 //* =====================================
 //* JSON (JavaScript Object Notation):
 //* ======================================
 
-//?JSON is a data interchange format derived from JavaScript objects. Objects can be easily converted to JSON and vice versa.
+//JSON is a data interchange format derived from JavaScript objects. Objects can be easily converted to 
+// JSON and vice versa.
 
 // let student = {
 //   id: 1,
-//   sName: "Vinod",
+//   sName: "syeda",
 //   sAge: 29,
 //   isStudent: false,
 //   greet: function () {
@@ -188,7 +226,6 @@
 //* =====================================
 //* "this" Object
 //* ======================================
-
 //? In JavaScript, the this keyword refers to an object.
 
 // Which object depends on how this is being invoked (used or called).
@@ -206,17 +243,19 @@
 // this is not a variable. It is a keyword. You cannot change the value of this.
 // ("use strict");
 
+
+// "use strict";
 // x = 5;
 // console.log(x);
 
 // function callme() {
 //   console.log(this);
-// }
+// };
+// callme();
 
 // callme(); // try to run on browser console
 
 //todo  Let's check the this keyword values in an object methods
-
 //* Regular Function Expression:
 // const obj = {
 //   name: "Kodyfier",
@@ -224,17 +263,16 @@
 //     console.log(this);
 //   },
 // };
-
 // obj.greet();
 
-//* In this example, the greet method is defined using the "Method Shorthand" syntax. It's a more concise way to define methods in object literals.
+//* In this example, the greet method is defined using the "Method Shorthand" syntax. It's a more concise 
+// way to define methods in object literals.
 // const obj = {
 //   name: "Kodyfier",
 //   greet() {
 //     console.log(this);
 //   },
 // };
-
 // obj.greet();
 
 //* Fat Arrow Function
@@ -244,27 +282,24 @@
 //     console.log(this);
 //   },
 // };
-
 // obj.greet();
 
 //* =====================================
 //* Objects Useful Methods
 //* ======================================
-
-// const product = {
-//   id: 1,
-//   name: "Laptop",
-//   category: "Computers",
-//   brand: "ExampleBrand",
-//   price: 999.99,
-//   stock: 50,
-//   description:
-//     "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.",
-//   image: "image link will be added during projects",
-// };
+const product = {
+    id: 1,
+    name: "Laptop",
+    category: "Computers",
+    brand: "ExampleBrand",
+    price: 999.99,
+    stock: 50,
+    description:
+        "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.",
+    image: "image link will be added during projects",
+};
 
 //? 1: Object.keys(): Returns an array containing the names of all enumerable own properties of an object.
-
 // let keys = Object.keys(product);
 // console.log(keys);
 
@@ -272,15 +307,18 @@
 // let values = Object.values(product);
 // console.log(values);
 
-//? 3: Object.entries(): Returns an array containing arrays of key-value pairs for each enumerable own property of an object.
+//? 3: Object.entries(): Returns an array containing arrays of key-value pairs for each enumerable own property
+//  of an object.
 // let entries = Object.entries(product);
 // console.log(entries);
 
-//? 4: Object.hasOwnProperty(): Returns a boolean indicating whether the object has the specified property as an own property.
+//? 4: Object.hasOwnProperty(): Returns a boolean indicating whether the object has the specified property as 
+// an own property.
 // console.log(product.hasOwnProperty("name")); // Output: true
 // console.log(product.hasOwnProperty("isStudent")); // Output: false
 
-//? 5: Object.assign(): Copies the values of all enumerable own properties from one or more source objects to a target object.
+//? 5: Object.assign(): Copies the values of all enumerable own properties from one or more source objects to a 
+// target object.
 // const target = { a: 1, b: 5 };
 // const source = { b: 3, c: 4 };
 // const mergedObject = Object.assign(target, source);
