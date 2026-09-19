@@ -375,58 +375,48 @@
 //* Interview Question - Object Comparison:
 //* ================================================
 //! Problem: Write a function that compares two objects to determine if they have the same properties and values.
-
 // const areObjectsEqual = (obj1, obj2) => {
-//   //   if (obj1.length != obj2.length) {
-//   //     console.log("hi");
-//   //     return false;
-//   //   }
-//   let o1 = Object.keys(obj1);
-//   let o2 = Object.keys(obj2);
+//     // console.log(obj1, obj2);
+//     // console.log(Object.keys(obj1),Object.keys(obj2));
 
-//   if (o1.length != o2.length) {
-//     console.log("There keys are not same");
-//     return false;
-//   }
+//     let a = Object.keys(obj1);
+//     let b = Object.keys(obj2);
 
-//   for (let key in obj1) {
-//     if (obj1[key] !== obj2[key]) {
-//       return false;
+//     if (a.length !== b.length) {
+//         console.log('There keys are not same');
+//         return false;
 //     }
-//   }
-
-//   return true;
-// };
-
-// // Example usage:
-// let objA = { name: "Alice", age: 26, city: "New York" };
-// let objB = { name: "Alice", age: 26, city: "New York" };
-// let objC = { name: "Bob", age: 30, city: "San Francisco" };
-
-// console.log(areObjectsEqual(objA, objB)); // Should return true
-// console.log(areObjectsEqual(objA, objC)); // Should return false
+//     for (let key in obj1) {
+//         if (obj1[key] !== obj2[key]) {            
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// let objA = { name: 'rida', age: 21 };
+// let objB = { name: 'rida', age: 21 };
+// let objC = { name: 'rida', age: 21 , city: 'karaci'};
+// // console.log(areObjectsEqual(objA, objB));
+// console.log(areObjectsEqual(objA, objC));
 
 //* ===============================================
 //* Interview Question - Object Transformation:
 //* ================================================
-//! Problem: Write a function that transforms an array of an objects into an object where the keys are the objects' ids.
-
+//! Problem: Write a function that transforms an array of an objects into an 
+//  object where the keys are the objects' ids.
+// Should print: { '1': { id: 1, name: 'Alice' }, '2': { id: 2, name: 'Bob' }, '3': { id: 3, name: 'Charlie' } }
 // let inputArray = [
-//   { id: 1, name: "Alice" },
-//   { id: 2, name: "Bob" },
-//   { id: 3, name: "Charlie" },
+//     { id: 1, name: "Alice" },
+//     { id: 2, name: "Bob" },
+//     { id: 3, name: "Charlie" },
 // ];
 
-// const arrayToObj = (arr) => {
-//   //   console.log(arr[2].id);
-//   let obj = {};
-//   for (let key of arr) {
-//     console.log(key.id, key);
-//     obj[key.id] = key;
-//     // console.log(key);
-//   }
-//   return obj;
-// };
-
-// console.log(arrayToObj(inputArray));
-// Should print: { '1': { id: 1, name: 'Alice' }, '2': { id: 2, name: 'Bob' }, '3': { id: 3, name: 'Charlie' } }
+// const check = (obj) => {
+//     let newObj = {}
+//     for (let key of obj) {
+//         newObj[key.id] = key;
+//         // console.log(key.id, key);
+//     }
+//     return newObj;
+// }
+// console.log(check(inputArray));
