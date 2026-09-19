@@ -2,11 +2,11 @@
 
 // process between the Our JS Code and final output
 
-// 1. Our JS Code 
+// =========================== 1. Our JS Code ========================
 
 // ==========================================================
 
-// 2. Parsing
+// =========================== 2. Parsing = (Code ko samajhna)=======================
 // JavaScript engine pehle code ko parse karta hai.
 // Simple meaning:
 // Parser code ko check karta hai aur samajhta hai ke code ka structure kya hai.
@@ -47,7 +47,7 @@
 
 // ==========================================================
 
-// 3 AST  (Abstract Syntax Tree)
+//  ========================= AST  (Abstract Syntax Tree) ==========================
 // AST = JavaScript code ka structured/tree-like representation.
 // Jab JavaScript engine code ko parse karta hai, to woh code ko samajhne ke liye uska 
 // structure create karta hai. Isi structure ko AST kehte hain.
@@ -140,3 +140,12 @@
 
 // ==========================================================
 
+
+
+// ========================= 3. Compilation (Code ko tayyar karna) ============================
+// in Compilation our code convert into machine code
+
+// JavaScript code ko aisi form mein prepare/convert karna jise JavaScript engine efficiently execute kar sake.
+// OR
+// JavaScript code ko machine ke samajhne layak format me convert karti hai taake wo jaldi execute ho sake.
+// Is process ko JIT (Just-In-Time Compilation) kehte hain.
