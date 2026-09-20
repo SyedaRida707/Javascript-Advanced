@@ -265,3 +265,39 @@
 // │  [10, 20, 30]           │
 // │                         │
 // └─────────────────────────┘
+
+
+// ==========================================================
+
+
+// Complete diagram
+
+
+//        JavaScript Code
+//               ↓
+//            Parsing
+//               ↓
+//       ┌───────────────┐
+//       │ Lexical Parser│
+//       │   Tokens      │
+//       └───────────────┘
+//               ↓
+//       Syntax Parser
+//               ↓
+//              AST
+//               ↓
+//          Compilation
+//               ↓
+//        JIT Compilation
+//               ↓
+//        Execution Phase
+//               ↓
+//    ┌─────────────────────┐
+//    │ Execution Context   │
+//    │ Call Stack          │
+//    │ Heap Memory         │
+//    │ Scope Chain         │
+//    │ Hoisting            │
+//    └─────────────────────┘
+//               ↓
+//          Final Output
