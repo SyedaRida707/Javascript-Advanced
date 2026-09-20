@@ -49,7 +49,7 @@
 
 //  ========================= AST  (Abstract Syntax Tree) ==========================
 // AST = JavaScript code ka structured/tree-like representation.
-// Jab JavaScript engine code ko parse karta hai, to woh code ko samajhne ke liye uska 
+// Jab JavaScript engine code ko parse karta hai, to woh code ko samajhne ke liye uska
 // structure create karta hai. Isi structure ko AST kehte hain.
 
 //           Code se AST tak ka flow
@@ -73,7 +73,7 @@
 // 21
 // ;
 
-// Phir parser in tokens ke relationships aur meaning ko samajhkar ek structured 
+// Phir parser in tokens ke relationships aur meaning ko samajhkar ek structured
 // representation banata hai  AST.
 
 
@@ -149,3 +149,41 @@
 // OR
 // JavaScript code ko machine ke samajhne layak format me convert karti hai taake wo jaldi execute ho sake.
 // Is process ko JIT (Just-In-Time Compilation) kehte hain.
+
+// JIT = combination/use of interpreter and compiler”
+
+
+
+
+// ==========================================================
+
+// ============================ 4. Execution Context (Code chalana) ===================================
+// Execution Context = ek environment/jagah jahan JavaScript ka code run hota hai.
+// Ab actual code execute/run hona start hota hai.
+// Execution Context ke 2 Phases hote hain
+
+// Phase 1: Creation Phase 🏗️  =>   Is phase me code run nahi hota, sirf tayari hoti hai.
+
+// JavaScript:
+
+// Memory banati hai.
+// Variables ke liye jagah reserve karti hai.
+// Functions ko memory me save karti hai.
+// Hoisting isi phase me hoti hai.
+
+// Example:
+// console.log(a);             // undefined
+// var a = 10;
+
+// ==========================================
+
+// Phase 2: Execution phase    =>   Ab JavaScript code ko line-by-line execute karti hai.
+
+// Example:
+
+// var a = 10;
+// console.log(a);     // 10
+
+// Execution Phase mein:
+// a = 10 → a mein 10 assign hota hai
+// console.log(a) → 10 print hota hai
