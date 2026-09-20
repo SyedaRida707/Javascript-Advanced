@@ -187,3 +187,81 @@
 // Execution Phase mein:
 // a = 10 → a mein 10 assign hota hai
 // console.log(a) → 10 print hota hai
+
+
+// ==========================================================
+
+
+// ============================= 5 Call Stack ==================================
+// Call Stack functions ko track karta hai, aur jo function last mein aata hai woh pehle
+// complete/remove hota hai LIFO.
+// Call Stack ek stack hai jo track karta hai
+// ke kaunsa function abhi execute ho raha hai.
+
+// Example:
+// function one() {
+//   two();
+// }
+
+// function two() {
+//   console.log("Hello");
+// }
+
+// one();
+
+// Jab function ka kaam complete ho jata hai,
+// to woh Call Stack se remove ho jata hai.
+// Call Stack LIFO rule follow karta hai:
+// Last In, First Out
+
+// Call Stack = JavaScript ke functions ki waiting/working list.
+// Jo function sabse last mein stack mein aata hai, woh sabse pehle remove hota hai.
+
+// example
+// function one()
+//      ↓
+//    two()
+//      ↓
+// console.log()
+
+
+//        Call Stack
+
+// ┌─────────────────┐
+// │ console.log()   │ phir stack me ye gya or phir delete phely hua
+// ├─────────────────┤
+// │ two()           │ one() mein two () call tha pgir yegya
+// ├─────────────────┤
+// │ one()           │ phely ye gya
+// └─────────────────┘
+//        ↓
+//    LIFO: Last In,
+//    First Out
+
+
+// ==========================================================
+
+
+// =================== 6 Heap Memory ===========================
+// / Heap Memory ek memory area hai jahan JavaScript objects, arrays aur functions ka data store karti hai.
+
+// Example:
+
+// const user = {
+//     name: "Rida",
+//     age: 21
+// };
+
+// const arr = [10, 20, 30]
+
+//        HEAP MEMORY
+// ┌─────────────────────────┐
+// │                         │
+// │  👤 user object         │
+// │  { name: "Rida",        │
+// │    age: 21 }            │
+// │                         │
+// │  📦 arr                 │
+// │  [10, 20, 30]           │
+// │                         │
+// └─────────────────────────┘
