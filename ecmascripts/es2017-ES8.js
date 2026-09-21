@@ -54,24 +54,24 @@
 
 
 // // Function parameter list
-function greet(name, age, boolean,) {
-    console.log(`Hello ${name}, you are ${age} years old.`);
-}
+// function greet(name, age, boolean,) {
+//     console.log(`Hello ${name}, you are ${age} years old.`);
+// }
 
 // // Function call
-greet("John", 30, true,);
+// greet("John", 30, true,);
 // Last comma allowed hai.
 
 // // Array literal
-const colors = ["red", "green", "blue",];
+// const colors = ["red", "green", "blue",];
  // Last comma allowed hai.
 
 // // Object literal
-const person = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 30,
-};
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 30,
+// };
  // Last comma allowed hai.
 
 // blue,   // ← trailing comma
