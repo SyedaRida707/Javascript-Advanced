@@ -25,14 +25,16 @@
 // \s+ → one or more whitespace (spaces, tabs, newlines)
 // / → regex end
 // g   → find all occurrences
-const normalizedText = text.replaceAll(/\s+/g, " ");
-console.log(normalizedText);
+// const normalizedText = text.replaceAll(/\s+/g, " ");
+// console.log(normalizedText);
 
 //* =====================================================
 //*  Logical Assignment Operators (||=, &&=, ??=)
 //* ====================================================
 
-//? Logical OR-Assignment (||=): This operator assigns the value of its right-hand operand to its left-hand operand if the left-hand operand evaluates to a falsy value (false, null, undefined, 0, '', NaN). Otherwise, it leaves the left-hand operand unchanged.
+//? Logical OR-Assignment (||=): This operator assigns the value of its right-hand operand to its 
+// left-hand operand if the left-hand operand evaluates to a falsy value (false, null, undefined, 0, '', NaN). 
+// Otherwise, it leaves the left-hand operand unchanged.
 // let x = false;
 // x = x || true; // equivalent to: x = x || true;
 // console.log(x); // Output: true
@@ -41,7 +43,9 @@ console.log(normalizedText);
 // y ||= 20; // equivalent to: y = y || 20;
 // console.log(y); // Output: 10 (unchanged)
 
-//? Logical AND-Assignment (&&=): This operator assigns the value of its right-hand operand to its left-hand operand if the left-hand operand evaluates to a truthy value. Otherwise, it leaves the left-hand operand unchanged.
+//? Logical AND-Assignment (&&=): If the left-side value is truthy, assign the right-side value to it. 
+// If the left-side value is falsy, leave it unchanged.
+
 // let x = true;
 // x &&= false; // equivalent to: x = x && false;
 // console.log(x); // Output: false
@@ -61,7 +65,8 @@ console.log(normalizedText);
 //* ======================
 //*  Promise.any()
 //* ====================
-//? Promise.any(): This method takes an iterable of Promise objects and returns a single Promise that resolves as soon as any of the input Promises fulfill.
+//? Promise.any(): This method takes an iterable of Promise objects and returns a single Promise that 
+// resolves as soon as any of the input Promises fulfill.
 
 // const promise1 = new Promise((resolve, reject) =>
 //   setTimeout(resolve, 200, "Promise 1")
