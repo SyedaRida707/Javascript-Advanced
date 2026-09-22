@@ -48,8 +48,9 @@
 // 2 The property name you want to check
 // Object.hasOwn(object, "property") → checks if the property directly belongs to the object.
 
-//? Object.hasOwn is the intended alternative for the Object.prototype.hasOwnProperty method. Although 
-// Object.prototype.hasOwnProperty has been in JavaScript specification for quite a time, it has some drawbacks.
+//Object.hasOwn() is the recommended alternative to Object.prototype.hasOwnProperty().
+// Object.prototype.hasOwnProperty() has been part of JavaScript for a long time, but it has some disadvantages.
+
 
 // const book = {
 //   name: "World Best JS Course",
