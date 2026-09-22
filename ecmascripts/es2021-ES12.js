@@ -15,14 +15,18 @@
 // another value in a given string.
 
 //? Replacing all occurrences of a word:
-const originalString = "Hello, world! Hello again.";
-const newString = originalString.replaceAll("Hello", "Hi");
-console.log(newString);
+// const originalString = "Hello, world! Hello again.";
+// const newString = originalString.replaceAll("Hello", "Hi");
+// console.log(newString);
 
 //? Replacing multiple spaces with a single space:
 // const text = "This   has   extra       spaces.";
-// const normalizedText = text.replaceAll(/\s+/g, " ");
-// console.log(normalizedText);
+// / → regex start
+// \s+ → one or more whitespace (spaces, tabs, newlines)
+// / → regex end
+// g   → find all occurrences
+const normalizedText = text.replaceAll(/\s+/g, " ");
+console.log(normalizedText);
 
 //* =====================================================
 //*  Logical Assignment Operators (||=, &&=, ??=)
