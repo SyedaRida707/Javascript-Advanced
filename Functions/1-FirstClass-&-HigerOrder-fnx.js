@@ -130,14 +130,14 @@
 //? Use the mathOperation function to perform addition and subtraction operations on two variables a and b.
 //? Display the results of the operations.
 
-// const operation = (x, y, callback) => {
+// const mathOperation = (x, y, callback) => {
 //     return callback(x, y);
 // }
 // const add = (a, b) => {
 //     return a + b
 // }
 // const sub = (a, b) => {
-//     return a - b
+//     return b - a
 // }
-// console.log(operation(2,4,add));
-// console.log(operation(7,4,sub));
+// console.log(mathOperation(2,4,add));
+// console.log(mathOperation(7,4,sub));
