@@ -2,82 +2,127 @@
 //*  Promise in JavaScript
 //* ==========================================
 
-// /A promise in JavaScript is an object that represents the future success or failure 
-// of an asynchronous operation.It helps you handle asynchronous operations more easily 
-// and clearly by allowing you to write asynchronous code in a way that looks like normal synchronous code.
+// Promise ek object hai jo batata hai ke future me koi kaam complete hoga ya fail hoga.
+
+// 3 States of promise
+// Pending  =>  Kaam chal raha hai
+// Fulfilled (Resolved)  =>  Kaam successful ho gaya
+// Rejected  =>  Kaam fail ho gaya
+
+// ---------------------------------------
+// Real-Life Example: ATM 💳
+
+// Socho tum ATM se paise nikal rahe ho.
+
+// ⏳ Pending → ATM abhi paise count kar raha hai.
+// 💵 Resolved → Paise mil gaye.
+// ❌ Rejected → Transaction fail ho gayi.
+// -----------------------------------------
 
 
-//In simpler terms, a promise is like a placeholder for the result of an asynchronous operation. 
-// Or A container for the future result or value.
-
-//* It's three states:
-
-//? Pending: Initial state, neither fulfilled nor rejected.
-//* Fulfilled(Resolved): The operation completed successfully.
-//! Rejected: The operation failed
+//              Create Promise
+//                     │
+//                     ▼
+//                  Pending
+//                     │
+//               ┌─────┴─────┐
+//               ▼           ▼
+//            resolve()   reject()
+//               ▼           ▼
+//            .then()     .catch()
 
 //? Promises have built-in methods like then and catch to handle the results of 
 // asynchronous operations when they complete or failed, making it easier 
 // to write asynchronous code that is more readable and maintainable compared to 
 // traditional callback-based approaches.
 
+
+// Promise = Future me milne wala result.
+// resolve() = Success.
+// reject() = Error.
+// .then() = Success ka result receive karta hai.
+// .catch() = Error handle karta hai.
+// .finally() = no matter what this must be run
+// setTimeout() = Asynchronous kaam ko simulate karne ke liye use hota hai.
+
 //* ==========================================
 //* Using the Promise Constructor (Class):
 //* ==========================================
 
-//? You can create a promise using the Promise constructor. This involves creating a new instance of 
-// the Promise class, which takes a function as an argument. This function, often referred to as the 
-// "executor function," takes two parameters: resolve and reject. You call resolve when the 
-// asynchronous operation is successful and reject when it encounters an error.
+//  JavaScript mein Promise banane ke liye `new Promise()` use karte hain.
+//  `Promise` ek class hai.
+//  `new Promise()` se us class ka naya object (instance) banta hai.
+//  Iske andar ek function dete hain, jise executor function kehte hain.
+//  Executor function ko do parameters milte hain:
 
-//* real life example
+//   * `resolve` → jab kaam successfully complete ho ✅
+//   * `reject` → jab koi error/problem ho ❌
 
-//todo  1:  default state is pending
+// *  Promise → Executor Function → resolve / reject**
+// * `resolve()` = Success ✅
+// * `reject()` = Error/Failure ❌
+// * `instance` = class se banaya gaya actual object
 
-//todo 2:  Promise Made:  Your friend promises to call you after 2 days at 6 pm. This is similar 
-// to creating a promise in JavaScript.
+// Example 1 (Success) ===================================
 
-//todo 3:  Pending Stage:  During the 2-day period, you're in a "pending" stage. You're not sure 
-// whether your friend will fulfill the promise (call you) or break the promise (not call you). 
-// Similarly, when you create a promise in JavaScript, it starts in a pending state until it 
-// either resolves (fulfills) or rejects.
+// const myPromise = new Promise(function (resolve, reject) {
+//     setTimeout(()=>{
+//         resolve('i am successful');
+//     },2000);
+// });
+// console.log(myPromise);
 
-//todo 4: Resolution at a Specific Time:  After 2 days and exactly at 6 pm, you'll know whether 
-// the promise is fulfilled (resolved) if your friend calls you, or if it's broken (rejected) 
-// if your friend doesn't call. This aligns with the idea that promises in JavaScript 
-// resolve or reject, often triggered by asynchronous operations, at a specific point in time.
+// Example 2 (Failure) ===================================
+
+// const myPromise = new Promise(function (resolve, reject) {
+//     resolve('i am successful');
+// });
+// console.log(myPromise);
+
+
+// Example 3 (Pending) ===================================
+
+// const myPromise = new Promise(function (resolve, reject) {
+//     reject('i am reject');
+// });
+// console.log(myPromise);
+
+// output
+// myPromise → Promise object
+// rejected → Promise ki state
+// "I am rejected" → result/reason
 
 //* ==========================================
 //* 2: Using a Function (Promise Wrapper):
 //* ==========================================
+// Hum ek function bana sakte hain jo Promise return karta hai.
+// Ye function usually asynchronous kaam karta hai.
+// Function ke andar manually new Promise() banate hain.
+// Kaam successful ho → resolve() ✅
+// Kaam mein error ho → reject() ❌
 
-//? You can also create a promise by defining a function that returns a promise. 
-// This function usually encapsulates some asynchronous operation. Inside this function, 
-// you manually create a promise and resolve or reject it based on the result of the asynchronous operation.
 
 // syntax
-// function myPromiseFunction() {
-//   return new Promise((resolve, reject) => {
-//     // Asynchronous operations here
-//     // If successful, call resolve(value)
-//     // If there's an error, call reject(error)
-//   });
+// function myPromise() {
+//     return new Promise((resolve, reject) => {
+//         // resolve('successful ☺');
+//         // reject('rejected 💔');
+//     });
 // }
+// // console.log(myPromise());
+// myPromise().then((respose) => console.log(respose)).catch((error) => console.log(error));
 
-// const pr = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     reject("Sorry, I can't");
-//   }, 2000);
+
+// Example
+// const order = new Promise((resolve,reject)=>{
+//  setTimeout(()=>{
+//     // resolve('your order is here 🍕');
+//     resolve('your order is reject');
+//  },2000);
 // })
-//   .then((res) => {
-//     console.log(res);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   })
-//   .finally(() => {
-//     console.log("Don't worry, We all miss you and keep smiling");
-//   });
+// .then((result)=>console.log(result))
+// .catch((error)=>console.log(error))
+// .finally(()=> console.log(`Thank you for ordering! 🍕`));
 
 // 1: By default promise has the pending state
 // 2: the moment we use setTimeout, we need to handle promises, we can do using then and catch
@@ -87,13 +132,13 @@
 //* Promise Methods
 //* ==========================================
 
-//? Promise.all is used when you want to wait for all promises to complete successfully. 
+//? Promise.all is used when you want to wait for all promises to complete successfully.
 // Reject state will throw an error.
 
-//? Promise.allSettled is used when you want to wait for all promises to complete, 
+//? Promise.allSettled is used when you want to wait for all promises to complete,
 // regardless of success or failure, and get information about their outcomes.
 
-//? Promise.race is used when you are interested in the result of the first promise that completes, 
+//? Promise.race is used when you are interested in the result of the first promise that completes,
 // regardless of success or failure.
 
 // Example usage:
