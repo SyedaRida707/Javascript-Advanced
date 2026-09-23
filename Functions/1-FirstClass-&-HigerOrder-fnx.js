@@ -51,30 +51,31 @@
 //* -------------------------------
 //*  Callback Functions:
 //* -------------------------------
-//? Definition: A callback function is a function passed as an argument to another function and is executed after the completion of a task.
+//? Definition: A callback function is a function passed as an argument to another function 
+// and is executed after the completion of a task.
 
-//* Here is the example ✅
-// Callback function
-// function processUserInput(name, greetUser) {
-//   console.log("Received input: " + name);
-//   greetUser(name);
+// const output = (name, callback) => {
+//     console.log('output', name);
+//     callback(name);
 // }
-
 // // Function to be used as a callback
-// function greetUser(name) {
-//   console.log(`Hello! ${name}`);
+// const greet = (name) => {
+//     console.log(`hello ${name}`);
 // }
+// // function passed as an argument to another function so its Higher-Order Functions
+// output('rida', greet);
 
-// processUserInput("Vinod", greetUser);
 
-// processUserInput is a higher-order function because it takes another function (callback) as an argument.
-// greetUser is a callback function because it's passed as an argument to processUserInput and gets executed after the completion of the main task
+// output is a higher-order function because it takes another function (callback) as an argument.
+// greet is a callback function because it's passed as an argument to output and gets executed 
+// after the completion of the main task
 
 //* -------------------------------
 //*  Closure:
 //* -------------------------------
 
-//? A closure is created when an inner function has access to the variables of its outer function, even after the outer function has finished executing.
+//? A closure is created when an inner function has access to the variables of its outer function, 
+// even after the outer function has finished executing.
 
 // function multiplier(factor) {
 //   return function (number) {
@@ -86,7 +87,7 @@
 // const double = multiplier(2);
 // console.log(double(5));
 
-//* also one more example
+// * also one more example
 // function outerFunction() {
 //   var outerVariable = "I'm from outer";
 
@@ -100,13 +101,21 @@
 // var closureFunction = outerFunction();
 // closureFunction(); // Outputs: "I'm from outer"
 
-// Here when we are calling the closureFunction() it is actually going to call the innerFunction() but in our executionContext the outerFunction is already popped  out. Still we can access the outerVaribale value and how we are able to access it, is what closure all about ?
+// Here when we are calling the closureFunction() it is actually going to call the innerFunction() 
+// but in our executionContext the outerFunction is already popped  out. Still we can access the 
+// outerVaribale value and how we are able to access it, is what closure all about ?
 
-// We just need to know that an inner function has always access to the variables of the outer (parent) function. That's it.
+// We just need to know that an inner function has always access to the variables of the 
+// outer (parent) function. That's it.
 
-// Why is it like that? It's because the variable object of the parent function stays in memory even after the function returns, and our inner function has access to this variable object through the scope chain.
+// Why is it like that? It's because the variable object of the parent function stays in memory 
+// even after the function returns, and our inner function has access to this variable object 
+// through the scope chain.
 
-// It might be beneficial to clarify that the call stack is simply the execution order and it is not the same thing as the computer's memory, which is where the variables are held.  So even though the function was removed from the call stack, its variables are still maintained in memory until they are no longer needed and garbage collection comes and removes them.
+// It might be beneficial to clarify that the call stack is simply the execution order and it is not 
+// the same thing as the computer's memory, which is where the variables are held.  So even though 
+// the function was removed from the call stack, its variables are still maintained in memory until 
+// they are no longer needed and garbage collection comes and removes them.
 
 //* ===================================
 //* Interview Question:
@@ -121,17 +130,14 @@
 //? Use the mathOperation function to perform addition and subtraction operations on two variables a and b.
 //? Display the results of the operations.
 
-// const mathOperation = (a, b, operation) => {
-//   return operation(a, b);
-// };
-
+// const operation = (x, y, callback) => {
+//     return callback(x, y);
+// }
 // const add = (a, b) => {
-//   return a + b;
-// };
-
+//     return a + b
+// }
 // const sub = (a, b) => {
-//   return b - a;
-// };
-
-// console.log(mathOperation(5, 15, add));
-// console.log(mathOperation(5, 15, sub));
+//     return a - b
+// }
+// console.log(operation(2,4,add));
+// console.log(operation(7,4,sub));
