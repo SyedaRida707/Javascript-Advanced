@@ -76,61 +76,81 @@
         // Handlers registered for the bubbling phase are executed. -->
 
         // <!--?  event.stopPropagation() -->
-        // <!-- The stopPropagation() method of the Event interface prevents further propagation 
-        // of the current event 
+        // stopPropagation() = Stop the event from traveling further.
         //  in the capturing and bubbling phases.
 
-        const outer = (e) => {
-            console.table(
-                [
-                    {
-                        Description: "I am the outer one",
-                        Target: e.target,
-                        CurrentTarget: e.currentTarget,
-                    },
-                ]
-            )
-        };
-        const middle = (e) => {
-            console.table(
-                [
-                    {
-                        Description: "I am the inner one",
-                        Target: e.target,
-                        CurrentTarget: e.currentTarget,
-                    },
-                ]
-            )
-        };
-        const inner = (e) => {
-            console.table(
-                [
-                    {
-                        Description: "I am the inner one",
-                        Target: e.target,
-                        CurrentTarget: e.currentTarget,
-                    },
-                ]
-            )
-        };
+        // const outer = (e) => {
+        //     console.table(
+        //         [
+        //             {
+        //                 Description: "I am the outer one",
+        //                 Target: e.target,
+        //                 CurrentTarget: e.currentTarget,
+        //             },
+        //         ]
+        //     )
+        //     // e.stopPropagation();
+        // };
+        // const middle = (e) => {
+        //     console.table(
+        //         [
+        //             {
+        //                 Description: "I am the inner one",
+        //                 Target: e.target,
+        //                 CurrentTarget: e.currentTarget,
+        //             },
+        //         ]
+        //     )
+        //     e.stopPropagation()
+        // };
+        // const inner = (e) => {
+        //     console.table(
+        //         [
+        //             {
+        //                 Description: "I am the inner one",
+        //                 Target: e.target,
+        //                 CurrentTarget: e.currentTarget,
+        //             },
+        //         ]
+        //     )
+        //     // e.stopPropagation()
+        // };
+
         // By default is the bubbling phase
         // bubbling phase bottom to top travel 
-        document.getElementById('outer').addEventListener('click', outer);
-        document.getElementById('middle').addEventListener('click', middle);
-        document.getElementById('inner').addEventListener('click', inner);
+        // document.getElementById('outer').addEventListener('click', outer);
+        // document.getElementById('middle').addEventListener('click', middle);
+        // document.getElementById('inner').addEventListener('click', inner);
 
+
+        // Capturing phase
         // To achieve event capturing, you can use the third parameter of the addEventListener method,
         // which specifies whether the event should be captured during the capturing phase. Setting it
         // to true will activate the capturing phase.
-        //   document
-        //     .getElementById("outer")
-        //     .addEventListener("click", callOuter, true);
-        //   document
-        //     .getElementById("inner")
-        //     .addEventListener("click", callInner, true);
-        //   document
-        //     .getElementById("middle")
-        //     .addEventListener("click", callMiddle, true);
+
+        // document.getElementById("outer").addEventListener("click", outer, true);
+        // document.getElementById("middle").addEventListener("click", middle, true);
+        // document.getElementById("inner").addEventListener("click", inner, true);
+
+
+// Capturing phase: Event outer → middle → inner travel karta hai.
+// Bubbling phase: Event inner → middle → outer travel karta hai.
+// stopPropagation() event ko aage travel karne se rokta hai.
+
+// Capturing mein outer par stopPropagation() lagao to outer ka event 
+// run hota hai, lekin middle aur inner tak event nahi pahunchta.
+
+// Bubbling mein middle par stopPropagation() lagao to inner aur middle ke events 
+// run hote hain, lekin outer ka event nahi chalta.
+
+// Capturing = neeche ki taraf travel.
+// Bubbling = upar ki taraf travel.
+
+// Important: stopPropagation() current element ke function ko nahi rokta;
+//  woh uske baad event ki journey rokta hai.
+
+// stopPropagation() jis element par lagaya gaya hai, us element ka handler normally 
+// run hota hai; uske baad event aage nahi jaata.
     </script>
 </body>
 
