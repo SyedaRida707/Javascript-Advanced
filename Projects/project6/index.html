@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        #main {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding-inline: 10px;
+            margin-top: 20px;
+        }
+
+        .design {
+            width: 6rem;
+            height: 5rem;
+            padding: 10px 7px;
+            border: .1rem solid palevioletred;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: .2rem;
+
+            &:hover{
+                background-color: palevioletred;
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Event Delegation Periodic table</h1>
+    <div id="main">
+    </div>
+
+
+    <script>
+        //Creating a project to display the top 50 elements of the periodic table in groups of 10 
+        // with event delegation involves dynamically generating HTML elements, managing the event 
+        // delegation, and displaying relevant information when an element is clicked.  -->
+
+        // Function to create a periodic table element
+        const createPeriodicElement = (symbol, atomicNum, name) => {
+            let divCreate = document.createElement('div');
+            divCreate.innerHTML = symbol;
+            divCreate.classList.add('design')
+            divCreate.setAttribute('data-atomic-number', atomicNum);
+            divCreate.setAttribute('data-element-name', name);
+            return divCreate;
+        }
+
+        const handlerEventClick = (e) => {
+            if (e.target.classList.contains('design')) {
+                const atomic = e.target.getAttribute('data-atomic-number');
+                const name = e.target.getAttribute('data-element-name');
+                alert(`Atomic num : ${atomic}\nElemet Name : ${name}`);
+            }
+        }
+
+
+        // Function to initialize the periodic table
+        const initializePeriodicTable = () => {
+            let div = document.querySelector('#main');
+
+            // Create 50 periodic table elements
+            for (let i = 1; i <= 50; i++) {
+                let divCreate = createPeriodicElement(`Elem ${i}`, `${i}`, `Element ${i}`);
+                div.append(divCreate);
+            }
+
+            // Add event delegation to the container
+            div.addEventListener('click', handlerEventClick);
+
+        }
+        initializePeriodicTable();
+    </script>
+</body>
+
+</html>
