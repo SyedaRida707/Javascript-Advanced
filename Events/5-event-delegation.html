@@ -37,6 +37,10 @@
             text-align: center;
             padding: .1rem .5rem;
             cursor: pointer;
+            transition: all 0.2s linear;
+            &:hover{
+                scale: 1.1;
+            }
         }
     </style>
 </head>
@@ -62,10 +66,34 @@
     </div>
 
     <script>
-        document.getElementsByTagName('ul'). addEventListener('click', (e) => {
-         console.log(e.target);
-         
+// =================================== 
+//  Event Delegation: 
+// ===================================
+// Event delegation is a concept in JavaScript where instead of attaching event listeners to individual 
+// elements, you attach a single event listener to a common ancestor of those elements. This is particularly 
+// useful when you have a large number of similar elements and want to reduce the number of event listeners, 
+// improve performance, and simplify code. -->
+
+// Example: List with Delegation -->
+// Consider a scenario where you have an unordered list (<ul>) with multiple list items (<li>), and you want 
+// to handle click events on each list item. Instead of adding a separate event listener to each list item, 
+// you can use event delegation. -->
+
+        document.querySelector('ul').addEventListener('click', (e) => {
+            let textli = e.target;
+
+            textli.style.transform = 'rotateY(360deg)';
+            setTimeout(() => {
+                textli.style.transform = 'rotateY(0deg)';
+            }, 500);
+
+            if (e.target.tagName === 'LI') {
+                console.log(e.target.tagName);
+                let p = document.querySelector('p').innerHTML = `Your tech crush is ${textli.innerText}`;
+
+            };
         });
+
     </script>
 </body>
 
