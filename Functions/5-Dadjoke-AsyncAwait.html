@@ -1,0 +1,101 @@
+<!--* async and await are JavaScript keywords introduced in ECMAScript 2017 (ES8) that make asynchronous 
+code look and behave more like synchronous code, making it easier to write, read, and reason about 
+asynchronous operations. -->
+
+<!--? async Function Declaration: The async keyword is used to declare an asynchronous function. 
+An asynchronous function returns a Promise implicitly, even if the return value is not explicitly 
+wrapped in a Promise. Inside an asynchronous function, you can use the await keyword to pause the 
+execution of code until a Promise is resolved or rejected. -->
+
+<!--? await Operator: The await keyword is used to pause the execution of an async function until a Promise 
+is settled (resolved or rejected). It can only be used inside an async function. When await is used with a 
+Promise, it waits for the Promise to resolve and returns the resolved value. If the Promise is rejected, 
+it throws an error that can be caught using a try...catch block. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        div {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: .5rem;
+            background-color: white;
+            border: 2px solid palevioletred;
+            padding: 1rem;
+            border-radius: .5rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: palevioletred;
+            border: none;
+            border-radius: 1rem;
+            color: white;
+            transition: .2s all linear;
+
+            &:hover {
+                box-shadow: 0px 0px 3px black;
+                background-image: linear-gradient(rgb(222, 145, 170), rgb(121, 2, 42));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to Dad Jokes!</h1>
+        <p id="api-data"></p>
+        <button id="fetchJoke">Get Joke</button>
+    </div>
+
+    <script>
+        const apiUrl = "https://icanhazdadjoke.com/"
+        let p = document.querySelector('#api-data');
+        let btn = document.querySelector('#fetchJoke')
+
+        async function fetchData() {
+            let res = await fetch(apiUrl, {
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
+            console.log(res);
+            let data = await res.json();
+            console.log(data);
+            p.innerHTML = data.joke
+        }
+        fetchData();
+        btn.addEventListener('click', fetchData)
+
+
+// async function ko asynchronous banata hai aur ye automatically Promise return karta hai.
+// await Promise ke result ka wait karta hai.
+// Promise resolve ho to await actual result/value deta hai.
+// Promise reject ho to await error throw karta hai.
+// Error ko try...catch se handle kiya ja sakta hai.
+    </script>
+</body>
+
+</html>
