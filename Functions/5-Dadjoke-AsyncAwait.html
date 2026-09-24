@@ -105,9 +105,13 @@ or releasing locks. -->
                 console.log(data);
                 console.log(data.joke);
                 p.innerHTML = data.joke
-            } catch (error) {
-                console.log(error);
-                p.innerHTML = error
+                // Now we can omit that optional parameter 👇 
+            // } catch (error) {
+            } catch {
+                // console.log(error); 
+                // p.innerHTML = error
+                console.log("I am sorry");
+                p.innerHTML = `Api is not working`;
             }
         }
         fetchData();
@@ -119,6 +123,35 @@ or releasing locks. -->
         // Promise resolve ho to await actual result/value deta hai.
         // Promise reject ho to await error throw karta hai.
         // Error ko try...catch se handle kiya ja sakta hai.
+
+// ------------------------------------------------
+// What is Optional Catch Binding?
+
+// Optional Catch Binding JavaScript mein ECMAScript 2019 (ES10) mein introduce hua.
+// Is feature ki madad se try...catch statement mein catch ke andar error parameter ko omit kar sakte hain.
+
+// Old Syntax
+// Pehle catch ke andar error parameter likhna zaroori hota tha:
+// try {
+//   // code that may cause an error
+// } catch (error) {
+//   // handle the error
+// }
+// Yahan error variable ke andar JavaScript ka Error object aa jata hai.
+// Yahan error variable ke andar error ki information available hoti hai.
+
+// New Syntax
+// Agar humein error object ki information use nahi karni, to parameter ko omit kar sakte hain:
+// try {
+//   // code that may cause an error
+// } catch {
+//   // handle the error
+// }
+// Yahan catch ko error object ki zaroorat nahi.
+
+// catch parameter optional hai, error handling optional nahi.
+// Error ki details nahi chahiye → catch { }
+// Error ki details chahiye → catch (error) { }
     </script>
 </body>
 
