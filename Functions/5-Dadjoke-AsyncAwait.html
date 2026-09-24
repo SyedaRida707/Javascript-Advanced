@@ -12,6 +12,23 @@ is settled (resolved or rejected). It can only be used inside an async function.
 Promise, it waits for the Promise to resolve and returns the resolved value. If the Promise is rejected, 
 it throws an error that can be caught using a try...catch block. -->
 
+<!--* In JavaScript, the try...catch statement is used for error handling. It allows you to catch and handle 
+exceptions (errors) that occur within a block of code. Here's how it works:
+
+ < try Block: The try block contains the code that you want to execute. It is the block of code where 
+ you anticipate that an error might occur. -->
+
+<!--? catch Block: The catch block follows the try block and is used to catch any exceptions (errors) that 
+occur within the try block. If an exception occurs, JavaScript jumps to the catch block to handle the error. 
+The catch block takes an error object as a parameter, which can be used to access information about the error, 
+such as its message or stack trace. -->
+
+<!--? finally Block (Optional): The finally block, if provided, is executed regardless of whether an error 
+occurs or not. It is typically used for cleanup tasks that should always be performed, such as closing resources 
+or releasing locks. -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,26 +92,33 @@ it throws an error that can be caught using a try...catch block. -->
         let p = document.querySelector('#api-data');
         let btn = document.querySelector('#fetchJoke')
 
-        async function fetchData() {
-            let res = await fetch(apiUrl, {
-                headers: {
-                    Accept: 'application/json'
-                }
-            });
-            console.log(res);
-            let data = await res.json();
-            console.log(data);
-            p.innerHTML = data.joke
+        // async function fetchData() {
+        const fetchData = async () => {
+            try {
+                let res = await fetch(apiUrl, {
+                    headers: {
+                        Accept: 'application/json'
+                    }
+                });
+                console.log(res);
+                let data = await res.json();
+                console.log(data);
+                console.log(data.joke);
+                p.innerHTML = data.joke
+            } catch (error) {
+                console.log(error);
+                p.innerHTML = error
+            }
         }
         fetchData();
         btn.addEventListener('click', fetchData)
 
 
-// async function ko asynchronous banata hai aur ye automatically Promise return karta hai.
-// await Promise ke result ka wait karta hai.
-// Promise resolve ho to await actual result/value deta hai.
-// Promise reject ho to await error throw karta hai.
-// Error ko try...catch se handle kiya ja sakta hai.
+        // async function ko asynchronous banata hai aur ye automatically Promise return karta hai.
+        // await Promise ke result ka wait karta hai.
+        // Promise resolve ho to await actual result/value deta hai.
+        // Promise reject ho to await error throw karta hai.
+        // Error ko try...catch se handle kiya ja sakta hai.
     </script>
 </body>
 
