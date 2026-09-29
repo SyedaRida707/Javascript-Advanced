@@ -1,0 +1,51 @@
+Intl.DisplayNames JavaScript ki built-in internationalization API hai jo codes ko readable names mein convert kar sakti hai.
+
+new Intl.DisplayNames(["en"], { type: "region" }).of("PK");
+"en" → result English mein chahiye
+{ type: "region" } → hum country/region ka naam chahte hain
+.of("PK") → "PK" country code hai
+Result → "Pakistan"
+
+So simple words mein:
+Country code (PK) ko English country name (Pakistan) mein convert karne ke liye Intl.DisplayNames use hoti hai.
+---------------------------------------------------------
+const getCountryName = (code) => {
+    return new Intl.DisplayNames(["en"], { type: "region" }).of(code);
+}
+
+console.log(getCountryName("PK")); // Pakistan
+console.log(getCountryName("US")); // United States
+console.log(getCountryName("IN")); // India
+
+
+-----------------------------------------------------------
+new Intl.DisplayNames(
+    ["en"],          // 👈 language
+    { type: "region" }
+).of(
+    "PK"             // 👈 country code
+);
+
+-----------------------------------------------------------
+["en"]  → kis language mein? → English
+"PK"    → kis country ka?    → Pakistan
+
+----------------------------------------------------------
+//output
+Pakistan
+
+
+
+
+
+
+
+
+
+
+
+options = date mein kya dikhana hai
+
+Intl.DateTimeFormat() = date ko format karne wala formatter banana
+
+.format(curDate) = actual date ko us format mein convert karna.
