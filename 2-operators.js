@@ -1,7 +1,6 @@
 // ===================================
 //  EXPRESSIONS AND OPERATORS Section
 // ====================================
-
 // 1st we will see what is expression means and also what is 
 // operand and operator in any expression?
 // Expression =  6           +            6
@@ -19,7 +18,6 @@
 // ===================================
 // 1: Assignment operators
 // ====================================
-
 // Assignment operators in programming are symbols used to 
 // assign values to variables. They take the value on the right 
 // side of the operator and assign it to the variable on the left side.
@@ -32,7 +30,6 @@
 // ===================================
 // 2: Arithmetic operators
 // ====================================
-
 // Arithmetic operators in programming perform basic mathematical operations on 
 // variables or values. They include addition, subtraction, multiplication, 
 // division, and modulus.
@@ -53,29 +50,25 @@
 
 //? Multiplication (*): Multiplies two values or variables.
 // Example:
-// var p = 4;
-// var q = 6;
-// var product = p * q;
-// console.log(product);
+var p = 4;
+var q = 6;
+// console.log(p*q);
 
 //? Division (/): Divides the left operand by the right operand.
 // Example:
 // var m = 15;
 // var n = 3;
-// var quotient = m / n;
-// console.log(quotient);
+// console.log(m / n);
 
 //? Modulus (%): Returns the remainder when the left operand is divided by the right operand.
 // Example:
 // var c = 17;
 // var d = 5;
-// var remainder = c % d;
-// console.log(remainder);
+// console.log(c % d);
 
 //* ===================================
 //* Challenge Time
 //* ====================================
-
 //! What will be the Output 🤔💭
 // var result = "hello" / 2;
 // console.log(result);
@@ -92,8 +85,6 @@
 // var result = 0.1 + 0.2;
 // console.log(result);
 // console.log(result.toFixed(2));
-// when working with floating-point numbers in JavaScript, consider 
-// using methods like toFixed() when precise decimal representation is necessary.
 
 // var result = 55 * "hello";
 // console.log(result);
@@ -101,15 +92,12 @@
 //* ===================================
 //* 3: String Operators
 //* ====================================
-
 //? There are a few ways to concatenate strings in JavaScript. The most common way 
 // is to use the + operator. For example, to concatenate the strings "Hello" and "World",
 // you would use the following code:
-
 // var str1 = "Hello";
 // var str2 = "World ";
-// var str3 = str1 + Str2;
-// console.log(str3);
+// console.log(str1 + str2);
 
 //* ===================================
 //*  InterView Question
@@ -120,28 +108,30 @@
 //* ===================================
 //* 4: comparison operators
 //* ====================================
-
 //? Comparison operators in JavaScript are used to compare values and 
 // return a Boolean result (true or false).
-
 
 //? Equal (==): Checks if two values are equal, performing type coercion if necessary.
 // Type coercion = JavaScript automatically converting a value from 
 // one data type to another when needed. 
 // Implicit coercion means JavaScript automatically converts a value from one type to another.
-// console.log(5 == "5");
+// console.log(5 == "5"); // true ✅  → "5" ko 5 bana diya
 
 //? Strict Equal (===):
 // Checks if two values are equal without performing type coercion.
-// console.log(5 === "5");
+// console.log(5 === "5"); // false ❌ → type different hai
 
-//? Not Equal (!=   👉 ! =):
+// ==   → type conversion ho sakti hai → 5 == "5" → true
+// ===  → type conversion nahi → 5 === "5" → false
+
+//? Not Equal (!=):
 // Checks if two values are not equal, performing type coercion if necessary.
+// console.log('5' != 5);
 // console.log(5 != 5);
 
 // !== Strict Not Equal, checks if two values are not equal without type coercion.
+// console.log('5' !== 5);
 // console.log(5 !== 5);
-
 
 //? Greater Than (>):
 // Checks if the value on the left is greater than the value on the right.
@@ -168,12 +158,15 @@
 //* ===================================
 //*  InterView Question
 //* ====================================
-
 //! What is the difference between == and === operators in JavaScript❓
-//? The equality == operator is a comparison operator that compares two 
-// values and returns true if they are equal. The strict equality === operator 
-// is also a comparison operator, but it compares two values and returns true 
-// only if they are equal and of the same type.
+// == is called the Equality Operator.
+// It compares two values.
+// If needed, JavaScript can change the type before comparing.
+
+// === is called the Strict Equality Operator.
+// It compares value + type.
+// === does not change the type
+
 // ex.
 // let num1 = 1;
 // let num2 = "1";
@@ -183,11 +176,9 @@
 // } else {
 //   console.log("not equal");
 // }
-
 //* ===================================
 //* 5: Logical operators in JavaScript
 //* ====================================
-
 //* There are three main logical operators: 
 // && (logical AND), || (logical OR), and ! (logical NOT).
 
@@ -209,24 +200,18 @@
 // Example:
 // var isOpen = false;
 // console.log(!isOpen);
-
 //* ===================================
 //*  InterView Question
 //* ====================================
-
 //? Combining logical operators allows you to create complex conditions:
 //! Q: Write a program that determines if a person is eligible to drive 
 // based on their age being greater than or equal to 18 and having a valid driver's license❓
 
 // var age = 19;
 // var hadDrivingLicense = false;
-
-// // age > 18
-// // age == 18
 // console.log(age >= 18 && hadDrivingLicense);
 
 //! How would the result change if hasDriverLicense was set to false❓
-
 //* ===================================
 //* 6: Unary operator
 //* ====================================
@@ -260,11 +245,9 @@
 // console.log(y);
 // console.log(x);
 
-
 //* ===================================
 //*  Conditional (ternary) operator
 //* ====================================
-
 //? syntax: condition ? expressionIfTrue : expressionIfFalse;
 
 //  write a program to check if the candidates isEligibleForDrive or not?
@@ -286,9 +269,6 @@
 //* ===================================
 //*  Combined Interview Questions
 //* ====================================
-
 // console.log(typeof ("5" - 3));
-
 // console.log(2 < 12 < 5);
-
 // console.log("20" + 10 + 10);
