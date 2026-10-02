@@ -29,11 +29,9 @@
 // } else {
 //   console.log("take blanked and sleep");
 // }
-
 //* ===============================
 //* Interview Question
 //* ===============================
-
 //! Requirements:
 //? If the person is 18 years or older, a citizen, and registered to vote,
 //  display a message saying they are eligible to vote.
@@ -47,7 +45,6 @@
 //? If the person is 18 or older, a citizen, but not registered to vote, display a message
 //  saying they are not eligible due to registration status.
 
-//? Extended voting eligibility checker with additional conditions
 
 // Assume the user's age, citizenship status, and registration status as inputs
 // let userAge = 19;
@@ -67,7 +64,6 @@
 // } else {
 //   console.log("You are not eligible to vote (Younger)");
 // }
-
 //* ===============================
 //* Interview Questions
 //* ===============================
@@ -85,6 +81,7 @@
 //? However, not all odd numbers are prime.
 
 // var num = 13;
+// var num = 6;
 // var isPrime = true;
 // for (var i = 2; i < num; i++) {
 //     if (num % i === 0) {
@@ -112,7 +109,6 @@
 //* ===============================
 //* Switch Statement
 //* ===============================
-
 //? Switch Statement: The switch statement is used to perform different
 // actions based on different conditions.
 //? Syntax:
@@ -161,8 +157,8 @@
 //! Write a JavaScript switch statement that takes a variable areaOfShapes
 // representing different shapes, and based on its value, calculates and logs the area of the
 // corresponding shape.
-// Consider three shapes: 'Rectangle,' 'Circle,' and 'Square.' For 'Rectangle,'
-// use variables a and b as the sides; for 'Circle,' use a variable r as the radius;
+// Consider three shapes: 'Rectangle,' 'Circle,' and 'Square.' 
+// For 'Rectangle,'use variables a and b as the sides; for 'Circle,' use a variable r as the radius;
 // and for 'Square,' use variable a as the side length. If the provided shape is not recognized,
 // log a message saying, 'Sorry the shape is not available.' Test your switch statement with areaOfShapes set to 'Square'
 // and sides a and b set to 5 and 10, respectively. Ensure that the correct area (25 in this case) is logged to the console.
@@ -182,7 +178,7 @@
 // switch (areaOfShapes) {
 //   case "square":
 //     result = a * a;
-//     console.log('it is a aread ',result);
+//     console.log('it is a area ',result);
 //     break;
 
 //   case "rectangle":
@@ -218,16 +214,13 @@
 //! Question: How does the switch statement handle the flow of control based on the value of areaOfShapes?
 //? The switch statement evaluates the value of areaOfShapes and executes the code block corresponding to the matching case. 
 // The break statements ensure that only the relevant code block is executed.
-
 //* ===============================
 //* While Loop
 //* ===============================
-
 // While Loop: A while loop in JavaScript is a control structure that
 // repeatedly executes a block of code as long as a specified condition
 // remains true. The loop continues iterating while the condition is true,
 // and it terminates when the condition becomes false.
-
 
 // usually used when you don't know exactly how many times and want to
 // continue until a condition becomes false.
@@ -267,7 +260,6 @@
 //* ===============================
 //* Do-While Loop
 //* ===============================
-
 //? Do...While Loop: A do...while loop in JavaScript is similar to a while loop,
 // but it guarantees that the loop body will be executed at least once before
 // checking the loop condition. The loop continues to execute while the specified
@@ -309,7 +301,6 @@
 //* ===============================
 //* For Loop
 //* ===============================
-
 //? For Loop: A for loop in JavaScript is a control flow statement that allows
 // you to repeatedly execute a block of code a specified number of times.
 // It's particularly useful when you know the exact number of iterations needed.
@@ -334,20 +325,26 @@
 // }
 
 //? Key Point:
-// The initialization, condition, and iteration expressions are optional.
-// You can omit any or all of them, but you must include the semicolons.
+// In a for loop, initialization, condition, and iteration are optional.
+// But if you leave them empty, you still need the two semicolons ;.
+// for (;;) {
+//   // code
+// }
+// This creates an infinite loop because there is no condition to make it stop.
+// It is similar to:
+// while (true) {
+//   // code
+// }
 
-//*The code for (;;) {} represents an infinite loop in JavaScript.
-// This construct is commonly used when you want a loop to run indefinitely
-// or until a break statement is encountered within the loop. It's equivalent to while (true) {}.
-
-//* use case: Game Development:
-//? In game development, an infinite loop can be used to continuously
-// update and render game frames until a specific condition (e.g., game over) is met.
+// Game development example 🎮
+// A game may keep running and updating continuously:
 
 // for (;;) {
-//   // Update game logic and render frames
+//   // update game
+//   // draw game
 // }
+
+// It keeps running until you stop it, usually with break or another mechanism.
 
 //? Common Use Cases:
 // When you know the exact number of iterations needed.
@@ -414,7 +411,6 @@
 //     }
 //     document.write('<br>')
 // }
-
 
 // for (var i = 1; i <= 5; i++) {
 //     var pattern = '';
