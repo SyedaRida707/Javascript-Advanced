@@ -10,7 +10,6 @@
 // History of javascript
 // in 1995 created by brendan Eich at netscape in just 10 days.
 
-
 // It shows a popup box in the browser.
 // 'hi js' is the message displayed inside the popup.
 // alert('hi js');
@@ -26,15 +25,11 @@
 // ====================================
 // Values and Variable in JavaScript
 // ====================================
-
-// In JavaScript, values and variables are fundamental
-// concepts that form the basis of programming.
-
 // Variables: A variable is a container that holds a value. It has a name
 // and can be used to store and manipulate data in a program.
-// Values:  A value is a piece of information that a program can work with.
-//  It can be a number, text, true/false, or more complex data.
 
+// Values:  A value is a piece of information that a program can work with.
+// It can be a number, text, true/false, or more complex data.
 
 // valid variable name
 // var my_data = 'rida'
@@ -45,12 +40,9 @@
 // var 123mydata = 'rida'
 // var my@age = 21;
 
-
-
 // ============================
 // Data Types Section
 // ============================
-
 // Data types define the type of values that a variable can hold.
 
 // Types of Primitive Data types
@@ -116,7 +108,6 @@
 // var str = 5;
 // console.log(typeof (str + 's'));
 
-
 // Truthy values are treated as true when used in conditions. Examples include:
 // 👉 true
 // 👉 Any non-empty string ("hello")
@@ -132,7 +123,7 @@
 // 👉 NaN (Not a Number)
 
 // To check if a non-empty string is truthy or falsy in JavaScript,
-//  we can directly use if statement.
+// we can directly use if statement.
 
 // var myName = -5;
 // if (true) {
@@ -140,12 +131,12 @@
 // } else {
 //   console.log("its a falsy value");
 // }
-
 // console.log(isNaN('hi'));
 // console.log(isNaN(1));
 
 // NaN === NaN, Why is it false ❓
-// if (NaN == NaN) {
+//NaN kisi bhi value ke equal nahi hota, even khud ke bhi nahi.
+// if (NaN === NaN) {
 //   console.log("both are equal ");
 // } else {
 //   console.log("not equal");
@@ -181,19 +172,35 @@
 
 //! Here are more examples
 // console.log(parseInt("123"));
+// 1 × 10² = 100
+// 2 × 10¹ = 20
+// 3 × 10⁰ = 3
+//100 + 20 + 3 = 123
 // // 123 (default base-10)
+
 // console.log(parseInt("12378901944", 5)); // use numbers 0 to 4
- // output 38 because 1 x 5 x 5, 2 x 5, 1x 5 these 3 nums are valid and out put 38
+// 5² = 5 × 5 = 25   for 1
+// 5¹ = 5            for 2
+// 5⁰ = 1            for 3 uske bd 7 hai valid nhi hai rukgya
+
+// 1×25 + 2×5 + 3×1
+// = 25 + 10 + 3
+// = 38
+// because 1 x 5 x 5, 2 x 5, 3 x 5 these 3 nums are valid and output 38
+
 // console.log(parseInt("123", 10));
 // 123 (explicitly specify base-10) use numbers 0 to 9
+
 // console.log(parseInt("   123 "));
-// // 123 (whitespace is ignored)
+// // 123 (whitespace is ignored);
+
 // console.log(parseInt("077"));
 // console.log(parseFloat("077"));
-// // 77 (leading zeros are ignored)
+// // 77 (leading zeros are ignored);
+
 // console.log(parseInt("1.9"));
 // +console.log(parseFloat("1.9"));
-// 1 (decimal part is truncated)
+// 1 (decimal part is truncated);
 
 // When we will not get an Output
 // console.log(parseInt("&123"));
@@ -208,8 +215,6 @@
 // console.log(isNaN("Rida"));
 // console.log(parseInt("xyz"));
 // console.log(parseInt("@#$"));
-
-// ========== parseInt & parseFloat End Section =========
 
 // ============================
 // Data Types Section - part 2
@@ -227,13 +232,13 @@
 // const str = "Hello " + "World";
 // console.log(str);
 
-// Type coercion is the automatic conversion of "values" from one data type to another.
-// It is a fundamental part of JavaScript and can be used to make code more readable and efficient.
-// There are two types of coercion in JavaScript: implicit and explicit. Implicit coercion happens
-// automatically, while explicit coercion is done manually by the programmer.
+// Type coercion means JavaScript automatically changes a value from one data type to another.
+// There are 2 types:
+// Implicit coercion: JavaScript does it automatically.
+// Explicit coercion: We do it manually.
 
-// It's worth noting that type coercion can lead to unexpected results, 
-// so it's essential to be aware of how JavaScript handles these situations.
+//Type coercion can sometimes give unexpected results, 
+//so we should understand how JavaScript converts values.
 
 // Implicit coercion = (automatically Tumne conversion nahi ki, JavaScript ne khud ki.)
 // let sum = "5" + 10;
