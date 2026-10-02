@@ -36,20 +36,18 @@
 //* ===============================
 //* Function Declaration:
 //* ==============================
-
 //? Declare a function using the function keyword, followed by the function name,
 //  parameters (if any), and the function body.
 //? This step defines the function and specifies what code should be 
 // executed when the function is called.
 
 // function greet() {
-//   console.log("Hello Guys, Welcome to Thapa Technical JS Course ");
+//   console.log("Hello Guys, Welcome to syeda's students ");
 // }
 
 //* =================================================
 //* Function Invocation (Calling a Function):
 //* =================================================
-
 //?After declaring a function, you can invoke or call it by using its name
 //  followed by parentheses.
 //? If the function has parameters, provide values (arguments) for those 
@@ -91,7 +89,6 @@
 //* ==============================
 //* Function Argument:
 //* ==============================
-
 //? A function argument is a value that you provide when you call a function. 
 // Arguments are passed into a function to fill the parameters defined in the function declaration.
 
@@ -110,7 +107,6 @@
 // greet('Syeda Rida');
 // greet('Atruba');
 // greet('Rida');
-
 
 //! 1. Write a function to find the sum of two numbers with parameters.
 // function sum(a, b) {
@@ -143,7 +139,7 @@
 // };
 
 // result(10, 15);
-
+//function () {}       // Invalid ❌
 //* ==============================
 //*  Return Keyword
 //* =============================
@@ -165,12 +161,8 @@
 
 // var result = sum(5, 5);
 // // console.log(result);
-
 // console.log("the sum of two number is " + result);
-
 // console.log(sum(5, 5));
-// console.log(sum(15, 50));
-// console.log(sum(25, 750));
 
 //* ==============================
 //* IIFE - immediately invoked function expression
@@ -253,7 +245,6 @@
 // };
 // console.log(reverseWord('rida'));
 
-
 //! Palindrome Check:
 //! Create a function to determine if a given string is a palindrome 
 // (reads the same backward as forward).
@@ -262,8 +253,9 @@
 //     let reverse = '';
 //     for (let i = str.length - 1; i >= 0; i--) {
 //         reverse += str[i];
-//         console.log(str[i]);
+//         console.log(str[i], reverse);
 //     }
+// here we use if else also
 //     return str === reverse ? `it is palindrome` : `it is not palindrome`;
 // }
 // console.log(isPalindrome('word'));
@@ -272,18 +264,3 @@
 // // isi     isi
 // radar
 // level
-// const isPalindrome = (str) => {
-//   let reverse = "";
-//   for (let char = str.length - 1; char >= 0; char--) {
-//     reverse = reverse + str[char];
-//   }
-//   if (str === reverse) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-
-//   return str === reverse ? true : false;
-// };
-
-// console.log(isPalindrome("level"));
